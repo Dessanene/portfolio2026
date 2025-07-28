@@ -1,0 +1,10 @@
+Ceci est un exemple de document PDF pour l'atelier SSH.
+Ce fichier simule un rapport détaillé sur l'installation et la configuration d'un serveur SSH sécurisé.
+
+Contenu du rapport :
+1. Introduction à SSH
+2. Installation du serveur OpenSSH
+3. Configuration sécurisée
+4. Authentification par clé
+5. Tunnels SSH
+6. Bonnes pratiques de sécurité

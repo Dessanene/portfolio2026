@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTS SIO - Portfolio | Dessanène Sanhan</title>
+    
+    <!-- CSS du portfolio -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navigation-new.css">
+    <link rel="stylesheet" href="css/bts-sio-modern.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Polices Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <!-- Fond animé avec particles.js -->
+    <div id="particles-js"></div>
+    
+    <!-- Navigation principale (identique au portfolio) -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="main-nav">
+                <div class="logo">
+                    <a href="index.html">SD</a>
+                </div>
+                
+                <ul class="nav-links">
+                    <!-- Liens principaux -->
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Accueil</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="bts-sio.html" class="nav-link">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>BTS SIO</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="profil.html" class="nav-link">
+                            <i class="fas fa-user"></i>
+                            <span>Profil</span>
+                        </a>
+                    </li>
+                    
+                    <!-- Menu déroulant "Dossiers" -->
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            <i class="fas fa-folder"></i>
+                            <span>Dossiers</span>
+                            <i class="fas fa-chevron-down dropdown-icon"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a href="situations-pro.html">
+                                    <i class="fas fa-briefcase"></i>
+                                    <span>Situations Pro</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="ateliers-pro.html">
+                                    <i class="fas fa-tools"></i>
+                                    <span>Ateliers Pro</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="certifications.html">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>Certifications</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="stages.html">
+                                    <i class="fas fa-building"></i>
+                                    <span>Stages</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="veille.html">
+                                    <i class="fas fa-search"></i>
+                                    <span>Veille</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="contact.html">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Contact</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <!-- Bouton menu mobile -->
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Contenu principal -->
+    <main class="bts-sio-main">
+        <div class="container">
+            
+            <!-- Section Présentation -->
+            <section class="bts-presentation">
+                <div class="section-header">
+                    <h1 class="page-title">
+                        <i class="fas fa-graduation-cap"></i>
+                        Présentation du BTS SIO
+                    </h1>
+                    <p class="page-subtitle">Services Informatiques aux Organisations</p>
+                </div>
+                
+                <div class="presentation-card">
+                    <p class="presentation-text">
+                        Le BTS SIO est une formation en deux ans axée sur l'informatique, destinée à former des professionnels 
+                        capables de répondre aux besoins des organisations en matière de solutions informatiques.
+                    </p>
+                </div>
+            </section>
+            
+            <!-- Section Choix de parcours -->
+            <section class="parcours-section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-route"></i>
+                        Choix de parcours en 1ère année
+                    </h2>
+                    <p class="section-subtitle">Dès le second semestre, l'étudiant choisit une spécialisation</p>
+                </div>
+                
+                <div class="parcours-grid">
+                    <div class="parcours-card slam-card">
+                        <div class="card-header">
+                            <i class="fas fa-laptop-code"></i>
+                            <h3>SLAM</h3>
+                            <span class="card-subtitle">Solutions Logicielles et Applications Métiers</span>
+                        </div>
+                        <div class="card-content">
+                            <p>Centré sur le développement et la maintenance de solutions applicatives</p>
+                        </div>
+                    </div>
+                    
+                    <div class="parcours-card sisr-card">
+                        <div class="card-header">
+                            <i class="fas fa-network-wired"></i>
+                            <h3>SISR</h3>
+                            <span class="card-subtitle">Solutions d'Infrastructure, Systèmes et Réseaux</span>
+                        </div>
+                        <div class="card-content">
+                            <p>Axé sur les systèmes, réseaux et l'administration d'infrastructures</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Section Focus détaillé -->
+            <section class="focus-section">
+                <div class="focus-grid">
+                    <!-- Focus SISR -->
+                    <div class="focus-card sisr-focus">
+                        <div class="focus-header">
+                            <i class="fas fa-network-wired"></i>
+                            <h3>Focus sur SISR</h3>
+                        </div>
+                        <div class="focus-content">
+                            <p class="focus-intro">L'étudiant apprend à :</p>
+                            <ul class="focus-list">
+                                <li><i class="fas fa-check"></i> Installer, intégrer, administrer et sécuriser des équipements et services informatiques</li>
+                                <li><i class="fas fa-check"></i> Exploiter, superviser et maintenir une infrastructure</li>
+                                <li><i class="fas fa-check"></i> Définir, configurer et gérer postes clients, serveurs et équipements réseau</li>
+                                <li><i class="fas fa-check"></i> Gérer les actifs d'une infrastructure informatique</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Focus SLAM -->
+                    <div class="focus-card slam-focus">
+                        <div class="focus-header">
+                            <i class="fas fa-laptop-code"></i>
+                            <h3>Focus sur SLAM</h3>
+                        </div>
+                        <div class="focus-content">
+                            <p class="focus-intro">L'étudiant développe des compétences pour :</p>
+                            <ul class="focus-list">
+                                <li><i class="fas fa-check"></i> Définir des spécifications techniques selon les besoins des utilisateurs</li>
+                                <li><i class="fas fa-check"></i> Réaliser, adapter et valider des solutions applicatives avec des outils de développement</li>
+                                <li><i class="fas fa-check"></i> Gérer le patrimoine applicatif</li>
+                                <li><i class="fas fa-check"></i> Rédiger la documentation technique et former les utilisateurs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Section Poursuite d'études -->
+            <section class="poursuite-section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-rocket"></i>
+                        Poursuite d'études
+                    </h2>
+                    <p class="section-subtitle">Après le BTS SIO, il est possible d'accéder à :</p>
+                </div>
+                
+                <div class="poursuite-grid">
+                    <div class="poursuite-card">
+                        <i class="fas fa-university"></i>
+                        <h4>Bachelors spécialisés</h4>
+                        <p>Bachelor AIS ou Bachelor CDWM</p>
+                    </div>
+                    
+                    <div class="poursuite-card">
+                        <i class="fas fa-certificate"></i>
+                        <h4>Licences professionnelles</h4>
+                        <p>Analyste programmeur, administrateur de réseaux, technicien maintenance, etc.</p>
+                    </div>
+                    
+                    <div class="poursuite-card">
+                        <i class="fas fa-cogs"></i>
+                        <h4>Écoles d'ingénieurs</h4>
+                        <p>3iL, ISEN (via Parcours Passerelle)</p>
+                    </div>
+                    
+                    <div class="poursuite-card">
+                        <i class="fas fa-building"></i>
+                        <h4>Écoles spécialisées</h4>
+                        <p>CESI, EPSI</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Section Débouchés professionnels -->
+            <section class="debouches-section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-briefcase"></i>
+                        Débouchés professionnels
+                    </h2>
+                    <p class="section-subtitle">Métiers possibles selon le parcours choisi</p>
+                </div>
+                
+                <div class="debouches-grid">
+                    <div class="debouche-card sisr-debouche">
+                        <div class="debouche-header">
+                            <i class="fas fa-network-wired"></i>
+                            <h3>Parcours SISR</h3>
+                        </div>
+                        <div class="debouche-content">
+                            <h4>Métiers possibles :</h4>
+                            <ul>
+                                <li>Administrateur systèmes/réseaux</li>
+                                <li>Technicien infrastructure</li>
+                                <li>Pilote d'exploitation</li>
+                                <li>Analyste d'exploitation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="debouche-card slam-debouche">
+                        <div class="debouche-header">
+                            <i class="fas fa-laptop-code"></i>
+                            <h3>Parcours SLAM</h3>
+                        </div>
+                        <div class="debouche-content">
+                            <h4>Métiers possibles :</h4>
+                            <ul>
+                                <li>Développeur informatique</li>
+                                <li>Analyste-programmeur</li>
+                                <li>Technicien informatique</li>
+                                <li>Informaticien d'études</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/navigation.js"></script>
+    <script>
+        // Configuration particles.js avec les couleurs du portfolio
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": ["#00D1FF", "#0A0F2C"]
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#00D1FF",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+</html>

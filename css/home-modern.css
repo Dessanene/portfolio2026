@@ -1,0 +1,218 @@
+/* Style moderne pour la page d'accueil */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    background-color: #0a192f;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 20, 50, 0.8), rgba(10, 15, 44, 0.9)),
+                linear-gradient(90deg, rgba(0, 209, 255, 0.1) 1px, transparent 1px) 0 0 / 20px 20px,
+                linear-gradient(0deg, rgba(0, 209, 255, 0.1) 1px, transparent 1px) 0 0 / 20px 20px;
+    animation: matrix-bg 20s linear infinite;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+@keyframes matrix-bg {
+    0% {
+        background-position: 0 0, 0 0, 0 0;
+    }
+    100% {
+        background-position: 0 1000px, 1000px 0, 0 1000px;
+    }
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.7));
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.typewriter-container {
+    height: 3rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.typewriter-text {
+    color: #00D1FF;
+    font-size: 1.2rem;
+    font-weight: 300;
+    border-right: 2px solid #00D1FF;
+    padding-right: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #00D1FF }
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.hero-btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.hero-btn-primary {
+    background-color: #00D1FF;
+    color: white;
+    border: none;
+}
+
+.hero-btn-primary:hover {
+    background-color: #00a8cc;
+    transform: translateY(-2px);
+}
+
+.hero-btn-secondary {
+    background-color: transparent;
+    color: #00D1FF;
+    border: 1px solid #00D1FF;
+}
+
+.hero-btn-secondary:hover {
+    background-color: rgba(0, 209, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.hero-date {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    z-index: 3;
+}
+
+.hero-date i {
+    margin-right: 0.5rem;
+    color: #00D1FF;
+}
+
+.hero-social {
+    position: absolute;
+    bottom: 4rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    z-index: 3;
+    width: 100%;
+}
+
+.hero-social a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.hero-social a:hover {
+    color: #00D1FF;
+    transform: translateY(-2px);
+}
+
+.copyright {
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+    z-index: 3;
+    background-color: transparent;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.4rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .hero-date {
+        bottom: 5rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .hero-social {
+        bottom: 3rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

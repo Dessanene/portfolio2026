@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activités Techniques Réalisées - Portfolio BTS SIO</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navigation-new.css">
+    <link rel="stylesheet" href="css/ateliers-tech.css">
+    <link rel="stylesheet" href="css/download-notification.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation principale -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="main-nav">
+                <div class="logo">
+                    <a href="index.html">SD</a>
+                </div>
+                
+                <ul class="nav-links">
+                    <!-- Liens principaux -->
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Accueil</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="bts-sio.html" class="nav-link">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>BTS SIO</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="profil.html" class="nav-link">
+                            <i class="fas fa-user"></i>
+                            <span>Profil</span>
+                        </a>
+                    </li>
+                    
+                    <!-- Menu déroulant "Plus" -->
+                    <li class="nav-item dropdown active">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            <i class="fas fa-folder"></i>
+                            <span>Dossiers</span>
+                            <i class="fas fa-chevron-down dropdown-icon"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a href="situations-pro.html">
+                                    <i class="fas fa-briefcase"></i>
+                                    <span>Situations Pro</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item active">
+                                <a href="ateliers-pro.html">
+                                    <i class="fas fa-tools"></i>
+                                    <span>Ateliers Pro</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="certifications.html">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>Certifications</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="stages.html">
+                                    <i class="fas fa-building"></i>
+                                    <span>Stages</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="veille.html">
+                                    <i class="fas fa-search"></i>
+                                    <span>Veille</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="contact.html">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Contact</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <!-- Bouton menu mobile -->
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenu principal -->
+    <main>
+        <div class="container">
+            <section class="page-header">
+                <h1>Activités Techniques Réalisées</h1>
+                <p>Découvrez les compétences techniques acquises dans le cadre de ma formation BTS SIO option SISR</p>
+            </section>
+            
+            <section class="ateliers-grid">
+                <!-- Installation de LXC -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <div class="tech-content">
+                        <h3>Installation de LXC</h3>
+                        <p>Virtualisation légère sous Linux</p>
+                        <div class="tech-buttons">
+                            <a href="#" class="tech-doc-link" data-doc="lxc">
+                                <i class="fas fa-file-alt"></i> Documentation
+                            </a>
+                            <a href="#" class="tech-download-link" data-download="lxc">
+                                <i class="fas fa-download"></i> Télécharger
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Installation de LAMP -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-terminal"></i>
+                    </div>
+                    <div class="tech-content">
+                        <h3>Installation de LAMP</h3>
+                        <p>Environnement web complet</p>
+                        <div class="tech-buttons">
+                            <a href="#" class="tech-doc-link" data-doc="lamp">
+                                <i class="fas fa-file-alt"></i> Documentation
+                            </a>
+                            <a href="#" class="tech-download-link" data-download="lamp">
+                                <i class="fas fa-download"></i> Télécharger
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Serveur DNS (Bind9) -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="tech-content">
+                        <h3>Serveur DNS (Bind9)</h3>
+                        <p>Résolution de noms de domaine</p>
+                        <div class="tech-buttons">
+                            <a href="#" class="tech-doc-link" data-doc="bind9">
+                                <i class="fas fa-file-alt"></i> Documentation
+                            </a>
+                            <a href="#" class="tech-download-link" data-download="bind9">
+                                <i class="fas fa-download"></i> Télécharger
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Serveur de sauvegarde (Rsync) -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <div class="tech-content">
+                        <h3>Serveur de sauvegarde (Rsync)</h3>
+                        <p>Synchronisation et sauvegarde</p>
+                        <div class="tech-buttons">
+                            <a href="#" class="tech-doc-link" data-doc="rsync">
+                                <i class="fas fa-file-alt"></i> Documentation
+                            </a>
+                            <a href="#" class="tech-download-link" data-download="rsync">
+                                <i class="fas fa-download"></i> Télécharger
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Serveur FTP (Proftpd) -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <div class="tech-content">
+                        <h3>Serveur FTP (Proftpd)</h3>
+                        <p>Transfert de fichiers sécurisé</p>
+                        <div class="tech-buttons">
+                            <a href="#" class="tech-doc-link" data-doc="ftp">
+                                <i class="fas fa-file-alt"></i> Documentation
+                            </a>
+                            <a href="#" class="tech-download-link" data-download="ftp">
+                                <i class="fas fa-download"></i> Télécharger
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Serveur web (Apache2) -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="tech-content">
+                        <h3>Serveur web (Apache2)</h3>
+                        <p>Hébergement de sites web</p>
+                        <div class="tech-buttons">
+                            <a href="#" class="tech-doc-link" data-doc="apache">
+                                <i class="fas fa-file-alt"></i> Documentation
+                            </a>
+                            <a href="#" class="tech-download-link" data-download="apache">
+                                <i class="fas fa-download"></i> Télécharger
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chiffrement SSL/TLS -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="tech-content">
+                        <h3>Chiffrement SSL/TLS</h3>
+                        <p>Sécurisation des communications</p>
+                        <div class="tech-buttons">
+                            <a href="#" class="tech-doc-link" data-doc="tls">
+                                <i class="fas fa-file-alt"></i> Documentation
+                            </a>
+                            <a href="#" class="tech-download-link" data-download="tls">
+                                <i class="fas fa-download"></i> Télécharger
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Serveur DHCP (ISC DHCP) -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <div class="tech-content">
+                        <h3>Serveur DHCP (ISC DHCP)</h3>
+                        <p>Attribution automatique d'adresses IP</p>
+                        <div class="tech-buttons">
+                            <a href="#" class="tech-doc-link" data-doc="dhcp">
+                                <i class="fas fa-file-alt"></i> Documentation
+                            </a>
+                            <a href="#" class="tech-download-link" data-download="dhcp">
+                                <i class="fas fa-download"></i> Télécharger
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solution banissement IP (Fail2ban) -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-ban"></i>
+                    </div>
+                    <div class="tech-content">
+                        <h3>Solution banissement IP (Fail2ban)</h3>
+                        <p>Protection contre les attaques</p>
+                        <div class="tech-buttons">
+                            <a href="#" class="tech-doc-link" data-doc="f2b">
+                                <i class="fas fa-file-alt"></i> Documentation
+                            </a>
+                            <a href="#" class="tech-download-link" data-download="f2b">
+                                <i class="fas fa-download"></i> Télécharger
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Serveur Samba -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <div class="tech-content">
+                        <h3>Serveur Samba</h3>
+                        <p>Partage de fichiers Linux/Windows</p>
+                        <div class="tech-buttons">
+                            <a href="#" class="tech-doc-link" data-doc="samba">
+                                <i class="fas fa-file-alt"></i> Documentation
+                            </a>
+                            <a href="#" class="tech-download-link" data-download="samba">
+                                <i class="fas fa-download"></i> Télécharger
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pare-feu (OPNsense) -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="tech-content">
+                        <h3>Pare-feu (OPNsense)</h3>
+                        <p>Protection du réseau</p>
+                        <div class="tech-buttons">
+                            <a href="#" class="tech-doc-link" data-doc="opn">
+                                <i class="fas fa-file-alt"></i> Documentation
+                            </a>
+                            <a href="#" class="tech-download-link" data-download="opn">
+                                <i class="fas fa-download"></i> Télécharger
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Active Directory (Windows Server) -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fab fa-windows"></i>
+                    </div>
+                    <div class="tech-content">
+                        <h3>Active Directory (Windows Server)</h3>
+                        <p>Gestion centralisée des utilisateurs</p>
+                        <div class="tech-buttons">
+                            <a href="#" class="tech-doc-link" data-doc="ws">
+                                <i class="fas fa-file-alt"></i> Documentation
+                            </a>
+                            <a href="#" class="tech-download-link" data-download="ws">
+                                <i class="fas fa-download"></i> Télécharger
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Surveillance réseau (Zabbix) -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="tech-content">
+                        <h3>Surveillance réseau (Zabbix)</h3>
+                        <p>Monitoring des équipements</p>
+                        <div class="tech-buttons">
+                            <a href="#" class="tech-doc-link" data-doc="zabbix">
+                                <i class="fas fa-file-alt"></i> Documentation
+                            </a>
+                            <a href="#" class="tech-download-link" data-download="zabbix">
+                                <i class="fas fa-download"></i> Télécharger
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Serveur base de données (MySQL) -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="tech-content">
+                        <h3>Serveur base de données (MySQL)</h3>
+                        <p>Gestion des données</p>
+                        <div class="tech-buttons">
+                            <a href="#" class="tech-doc-link" data-doc="mysql">
+                                <i class="fas fa-file-alt"></i> Documentation
+                            </a>
+                            <a href="#" class="tech-download-link" data-download="mysql">
+                                <i class="fas fa-download"></i> Télécharger
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SSH -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <div class="tech-content">
+                        <h3>SSH</h3>
+                        <p>Administration sécurisée à distance</p>
+                        <div class="tech-buttons">
+                            <a href="#" class="tech-doc-link" data-doc="ssh">
+                                <i class="fas fa-file-alt"></i> Documentation
+                            </a>
+                            <a href="#" class="tech-download-link" data-download="ssh">
+                                <i class="fas fa-download"></i> Télécharger
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Authentificateurs MFA -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="tech-content">
+                        <h3>Authentificateurs MFA</h3>
+                        <p>Sécurité d'authentification à deux facteurs</p>
+                        <div class="tech-buttons">
+                            <a href="#" class="tech-doc-link" data-doc="mfa">
+                                <i class="fas fa-file-alt"></i> Documentation
+                            </a>
+                            <a href="#" class="tech-download-link" data-download="mfa">
+                                <i class="fas fa-download"></i> Télécharger
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Munin (Monitoring) -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="tech-content">
+                        <h3>Munin</h3>
+                        <p>Surveillance et monitoring de serveurs</p>
+                        <div class="tech-buttons">
+                            <a href="#" class="tech-doc-link" data-doc="munin">
+                                <i class="fas fa-file-alt"></i> Documentation
+                            </a>
+                            <a href="#" class="tech-download-link" data-download="munin">
+                                <i class="fas fa-download"></i> Télécharger
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HTTP/HTTPS -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="tech-content">
+                        <h3>HTTP/HTTPS</h3>
+                        <p>Sécurisation des communications web</p>
+                        <div class="tech-buttons">
+                            <a href="#" class="tech-doc-link" data-doc="https">
+                                <i class="fas fa-file-alt"></i> Documentation
+                            </a>
+                            <a href="#" class="tech-download-link" data-download="https">
+                                <i class="fas fa-download"></i> Télécharger
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Failover -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <div class="tech-content">
+                        <h3>Failover</h3>
+                        <p>Haute disponibilité et basculement automatique</p>
+                        <div class="tech-buttons">
+                            <a href="#" class="tech-doc-link" data-doc="failover">
+                                <i class="fas fa-file-alt"></i> Documentation
+                            </a>
+                            <a href="#" class="tech-download-link" data-download="failover">
+                                <i class="fas fa-download"></i> Télécharger
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Virtualisation d'infrastructure -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="tech-content">
+                        <h3>Virtualisation d'infrastructure</h3>
+                        <p>Mise en place d'une infrastructure virtuelle complète avec Proxmox, comprenant plusieurs serveurs et un système de sauvegarde</p>
+                        <div class="tech-buttons">
+                            <a href="#" class="tech-doc-link" data-doc="proxmox">
+                                <i class="fas fa-file-alt"></i> Documentation
+                            </a>
+                            <a href="#" class="tech-download-link" data-download="proxmox">
+                                <i class="fas fa-download"></i> Télécharger
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Modal pour la documentation -->
+            <div id="doc-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <h2 id="modal-title">Documentation</h2>
+                    <div id="modal-content" class="documentation-content">
+                        <!-- Le contenu sera chargé dynamiquement -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- À propos des ateliers professionnels -->
+    <section class="about-section">
+        <div class="container">
+            <div class="cyber-card">
+                <div class="cyber-card-header">
+                    <div class="cyber-card-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <h2>À propos des ateliers professionnels</h2>
+                </div>
+                <div class="cyber-card-content">
+                    <p>Les ateliers professionnels sont des projets pratiques réalisés dans le cadre de ma formation BTS SIO option SISR. Ils m'ont permis de mettre en application les connaissances théoriques acquises en cours et de développer des compétences techniques essentielles pour mon futur métier.</p>
+                    <p>Chaque atelier est documenté dans un rapport détaillé qui présente la problématique, la méthodologie, les solutions techniques mises en œuvre et les résultats obtenus. Ces rapports sont disponibles en téléchargement au format PDF.</p>
+                </div>
+                <div class="cyber-card-footer">
+                    <div class="cyber-card-stats">
+                        <div class="stat">
+                            <i class="fas fa-tools"></i>
+                            <span>16 ateliers</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Documentation PDF</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html">SD</a>
+                    <p>Portfolio BTS SIO</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="bts-sio.html">BTS SIO</a></li>
+                        <li><a href="profil.html">Profil</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Réseaux sociaux</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Portfolio BTS SIO. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/ateliers-tech.js"></script>
+</body>
+</html>

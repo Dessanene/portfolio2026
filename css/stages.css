@@ -1,0 +1,396 @@
+/* Styles pour la page des stages */
+:root {
+    --primary-color: #00d1ff;
+    --secondary-color: #ff00ff;
+    --dark-bg: #0a0a0a;
+    --card-bg: rgba(10, 10, 10, 0.8);
+    --text-color: #e0e0e0;
+    --title-font: 'Orbitron', sans-serif;
+    --body-font: 'Rajdhani', sans-serif;
+    --mono-font: 'Share Tech Mono', monospace;
+    --glow-shadow: 0 0 10px rgba(0, 209, 255, 0.5), 0 0 20px rgba(0, 209, 255, 0.3);
+    --card-border: 1px solid rgba(0, 209, 255, 0.3);
+}
+
+/* Container principal */
+.stages-container {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    color: var(--text-color);
+}
+
+/* Titre et description de la page */
+.page-title {
+    font-family: var(--title-font);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 209, 255, 0.7);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+.page-description {
+    text-align: center;
+    font-family: var(--body-font);
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.8;
+}
+
+/* Grille des stages */
+.stages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+/* Carte de stage */
+.stage-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    border: var(--card-border);
+    overflow: hidden;
+    box-shadow: var(--glow-shadow);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    position: relative;
+}
+
+.stage-card.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.stage-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 0 15px rgba(0, 209, 255, 0.7), 0 0 30px rgba(0, 209, 255, 0.4);
+}
+
+/* En-tête de la carte */
+.stage-header {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(0, 209, 255, 0.3);
+    position: relative;
+}
+
+.stage-header h2 {
+    font-family: var(--title-font);
+    font-size: 1.4rem;
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.stage-date {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    font-family: var(--mono-font);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.stage-date i {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+/* Contenu de la carte */
+.stage-content {
+    padding: 1.5rem;
+}
+
+/* Informations sur l'entreprise */
+.stage-info {
+    margin-bottom: 1.5rem;
+}
+
+.stage-company {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.stage-company i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: var(--primary-color);
+    animation: pulse 3s infinite alternate;
+}
+
+.stage-company h3 {
+    font-family: var(--title-font);
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.stage-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+}
+
+.detail-item i {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+/* Description du stage */
+.stage-description, .stage-missions, .stage-technologies, .stage-learnings {
+    margin-bottom: 1.5rem;
+}
+
+.stage-description h4, .stage-missions h4, .stage-technologies h4, .stage-learnings h4 {
+    font-family: var(--title-font);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+/* Liste des missions */
+.stage-missions ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.stage-missions li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.stage-missions li i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+}
+
+/* Technologies utilisées */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-tag {
+    background: rgba(0, 209, 255, 0.15);
+    border: 1px solid rgba(0, 209, 255, 0.3);
+    border-radius: 20px;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.9rem;
+    font-family: var(--mono-font);
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    background: rgba(0, 209, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Actions (boutons) */
+.stage-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.stage-action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 1.2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: var(--body-font);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+.report-btn {
+    background: rgba(0, 209, 255, 0.1);
+    border: 1px solid rgba(0, 209, 255, 0.5);
+    color: var(--primary-color);
+}
+
+.pdf-btn {
+    background: rgba(255, 0, 255, 0.1);
+    border: 1px solid rgba(255, 0, 255, 0.5);
+    color: var(--secondary-color);
+}
+
+.stage-action-btn i {
+    margin-right: 0.5rem;
+}
+
+.stage-action-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.report-btn:hover {
+    background: rgba(0, 209, 255, 0.2);
+}
+
+.pdf-btn:hover {
+    background: rgba(255, 0, 255, 0.2);
+}
+
+/* Stage futur (vide) */
+.future-stage {
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.9), rgba(30, 30, 30, 0.8));
+}
+
+.stage-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.stage-placeholder i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    animation: pulse 3s infinite alternate;
+}
+
+.stage-placeholder p {
+    font-family: var(--title-font);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.stage-countdown {
+    font-family: var(--mono-font);
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 209, 255, 0.3);
+    margin-top: 1rem;
+}
+
+/* Section des compétences développées */
+.skills-developed {
+    margin-top: 4rem;
+}
+
+.section-title {
+    font-family: var(--title-font);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    border: var(--card-border);
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.skill-card.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--glow-shadow);
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    animation: pulse 3s infinite alternate;
+}
+
+.skill-card h3 {
+    font-family: var(--title-font);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.skill-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Animations */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px rgba(0, 209, 255, 0.5), 0 0 10px rgba(0, 209, 255, 0.3);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(0, 209, 255, 0.7), 0 0 20px rgba(0, 209, 255, 0.5), 0 0 30px rgba(0, 209, 255, 0.3);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .stages-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stage-actions {
+        flex-direction: column;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+}

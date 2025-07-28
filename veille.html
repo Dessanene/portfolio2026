@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille Technologique : Les Malwares et leurs évolutions en 2025 | Dessanène Sanhan</title>
+    
+    <!-- CSS du portfolio -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navigation-new.css">
+    <link rel="stylesheet" href="css/veille-modern.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Polices Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    
+    <!-- Chart.js pour les graphiques -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <!-- Fond animé avec particles.js -->
+    <div id="particles-js"></div>
+    
+    <!-- Navigation principale (identique au portfolio) -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="main-nav">
+                <div class="logo">
+                    <a href="index.html">SD</a>
+                </div>
+                
+                <ul class="nav-links">
+                    <!-- Liens principaux -->
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Accueil</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="bts-sio.html" class="nav-link">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>BTS SIO</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="profil.html" class="nav-link">
+                            <i class="fas fa-user"></i>
+                            <span>Profil</span>
+                        </a>
+                    </li>
+                    
+                    <!-- Menu déroulant "Dossiers" -->
+                    <li class="nav-item dropdown active">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            <i class="fas fa-folder"></i>
+                            <span>Dossiers</span>
+                            <i class="fas fa-chevron-down dropdown-icon"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a href="situations-pro.html">
+                                    <i class="fas fa-briefcase"></i>
+                                    <span>Situations Pro</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="ateliers-pro.html">
+                                    <i class="fas fa-tools"></i>
+                                    <span>Ateliers Pro</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="certifications.html">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>Certifications</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="stages.html">
+                                    <i class="fas fa-building"></i>
+                                    <span>Stages</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item active">
+                                <a href="veille.html">
+                                    <i class="fas fa-search"></i>
+                                    <span>Veille</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="contact.html">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Contact</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <!-- Bouton menu mobile -->
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenu principal -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero-section" data-aos="fade-up">
+                <div class="hero-content">
+                    <div class="hero-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="title-main">Veille Technologique</span>
+                        <span class="title-sub">Cybersécurité : Les Malwares</span>
+                    </h1>
+                    <p class="hero-description">
+                        La veille technologique est essentielle dans le domaine de l'informatique pour rester à jour avec les dernières évolutions, tendances et bonnes pratiques. Je me concentre particulièrement sur la cybersécurité et les menaces émergentes comme les malwares, afin d'anticiper les risques et d'adapter mes compétences aux nouveaux défis du secteur.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">5.6M</span>
+                            <span class="stat-label">Nouveaux malwares/jour</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">$6T</span>
+                            <span class="stat-label">Coût global cybercriminalité</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">43%</span>
+                            <span class="stat-label">Attaques sur PME</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Ma démarche de veille -->
+            <section class="methodology-section" data-aos="fade-up">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-lightbulb"></i>
+                        Ma démarche de veille
+                    </h2>
+                </div>
+                
+                <div class="methodology-content">
+                    <div class="approach-card" data-aos="slide-right">
+                        <div class="approach-icon">
+                            <i class="fas fa-target"></i>
+                        </div>
+                        <div class="approach-text">
+                            <h3>Objectifs de ma veille</h3>
+                            <p>Dans le cadre de ma formation BTS SIO option SISR, je maintiens une veille technologique active sur la cybersécurité, particulièrement sur les malwares et les nouvelles menaces. Cette démarche me permet de :</p>
+                            <ul>
+                                <li>Comprendre l'évolution des menaces cybernétiques</li>
+                                <li>Anticiper les nouveaux vecteurs d'attaque</li>
+                                <li>Développer mes compétences en sécurité informatique</li>
+                                <li>Proposer des solutions de protection adaptées</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Méthodologie -->
+            <section class="tools-section" data-aos="fade-up">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-cogs"></i>
+                        Ma méthodologie de veille
+                    </h2>
+                </div>
+                
+                <div class="tools-grid">
+                    <!-- Sources d'information -->
+                    <div class="tools-category" data-aos="slide-up" data-aos-delay="100">
+                        <h3><i class="fas fa-rss"></i> Sources d'information</h3>
+                        <div class="sources-list">
+                            <div class="source-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Sites spécialisés en cybersécurité (ANSSI, ZDNet, The Register)</span>
+                            </div>
+                            <div class="source-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>Newsletters techniques sur la sécurité</span>
+                            </div>
+                            <div class="source-item">
+                                <i class="fas fa-rss-square"></i>
+                                <span>Flux RSS de chercheurs en sécurité</span>
+                            </div>
+                            <div class="source-item">
+                                <i class="fas fa-podcast"></i>
+                                <span>Podcasts sur la cybersécurité</span>
+                            </div>
+                            <div class="source-item">
+                                <i class="fas fa-users"></i>
+                                <span>Forums spécialisés et communautés de chercheurs</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Outils utilisés -->
+                    <div class="tools-category" data-aos="slide-up" data-aos-delay="200">
+                        <h3><i class="fas fa-tools"></i> Outils utilisés</h3>
+                        <div class="tools-list">
+                            <div class="tool-card">
+                                <div class="tool-icon">
+                                    <i class="fas fa-stream"></i>
+                                </div>
+                                <div class="tool-info">
+                                    <h4>Feedly</h4>
+                                    <p>Agrégateur de flux RSS pour suivre les actualités de multiples sources</p>
+                                    <a href="https://feedly.com" target="_blank" class="tool-link">
+                                        Découvrir <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="tool-card">
+                                <div class="tool-icon">
+                                    <i class="fas fa-bookmark"></i>
+                                </div>
+                                <div class="tool-info">
+                                    <h4>Pocket</h4>
+                                    <p>Outil de sauvegarde d'articles pour lecture ultérieure</p>
+                                    <a href="https://getpocket.com" target="_blank" class="tool-link">
+                                        Découvrir <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="tool-card">
+                                <div class="tool-icon">
+                                    <i class="fas fa-sticky-note"></i>
+                                </div>
+                                <div class="tool-info">
+                                    <h4>Notion</h4>
+                                    <p>Outil de prise de notes et d'organisation de l'information</p>
+                                    <a href="https://www.notion.so" target="_blank" class="tool-link">
+                                        Découvrir <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="tool-card">
+                                <div class="tool-icon">
+                                    <i class="fas fa-virus"></i>
+                                </div>
+                                <div class="tool-info">
+                                    <h4>VirusTotal</h4>
+                                    <p>Service d'analyse de fichiers et URLs suspects</p>
+                                    <a href="https://www.virustotal.com" target="_blank" class="tool-link">
+                                        Découvrir <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Malwares -->
+            <section class="malware-section" data-aos="fade-up">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-shield-virus"></i>
+                        Cybersécurité : Les Malwares
+                    </h2>
+                </div>
+                
+                <!-- Qu'est-ce qu'un malware -->
+                <div class="malware-definition" data-aos="slide-up">
+                    <h3><i class="fas fa-question-circle"></i> Qu'est-ce qu'un malware ?</h3>
+                    <div class="definition-content">
+                        <p>Un malware (logiciel malveillant) est un programme conçu pour s'infiltrer dans un système informatique sans le consentement de l'utilisateur, dans le but de voler des données, d'espionner, d'endommager le système ou d'en prendre le contrôle.</p>
+                        
+                        <div class="reference-links">
+                            <h4>Articles de référence :</h4>
+                            <div class="links-grid">
+                                <a href="https://www.ssi.gouv.fr/guide/guide-dhygiene-informatique/" target="_blank" class="ref-link">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>ANSSI - Guide d'hygiène informatique</span>
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://www.kaspersky.fr/resource-center/threats/malware" target="_blank" class="ref-link">
+                                    <i class="fas fa-virus"></i>
+                                    <span>Kaspersky - Histoire des malwares</span>
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Types de malwares -->
+                <div class="malware-types" data-aos="slide-up">
+                    <h3><i class="fas fa-list"></i> Types de malwares</h3>
+                    <p class="types-intro">Il existe de nombreux types de malwares, chacun avec ses propres caractéristiques et objectifs. Les plus courants sont les virus, les vers, les chevaux de Troie, les ransomwares, les spywares, les adwares, les rootkits et les botnets.</p>
+                    
+                    <div class="types-grid">
+                        <div class="type-category" data-aos="flip-left" data-aos-delay="100">
+                            <div class="category-header">
+                                <div class="category-icon">
+                                    <i class="fas fa-bug"></i>
+                                </div>
+                                <h4>Virus et vers</h4>
+                            </div>
+                            <p>Les virus se propagent en s'attachant à des fichiers légitimes, tandis que les vers sont autonomes et se propagent via les réseaux.</p>
+                            <a href="https://www.cert.ssi.gouv.fr" target="_blank" class="category-link">
+                                CERT-FR - Différence virus/vers <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="type-category" data-aos="flip-left" data-aos-delay="200">
+                            <div class="category-header">
+                                <div class="category-icon">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                                <h4>Ransomwares</h4>
+                            </div>
+                            <p>Les ransomwares chiffrent les données de la victime et exigent une rançon pour les déchiffrer.</p>
+                            <a href="https://www.cybermalveillance.gouv.fr" target="_blank" class="category-link">
+                                Cybermalveillance - Ransomwares <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="type-category" data-aos="flip-left" data-aos-delay="300">
+                            <div class="category-header">
+                                <div class="category-icon">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <h4>Spywares et keyloggers</h4>
+                            </div>
+                            <p>Les spywares collectent des informations sur l'utilisateur à son insu, tandis que les keyloggers enregistrent les frappes au clavier.</p>
+                            <a href="https://www.cnil.fr/fr/spyware-logiciel-espion-definition" target="_blank" class="category-link">
+                                CNIL - Spywares <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="type-category" data-aos="flip-left" data-aos-delay="400">
+                            <div class="category-header">
+                                <div class="category-icon">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <h4>Rootkits et botnets</h4>
+                            </div>
+                            <p>Les rootkits se cachent profondément dans le système, tandis que les botnets transforment les machines infectées en "zombies" contrôlés à distance.</p>
+                            <a href="https://www.ssi.gouv.fr" target="_blank" class="category-link">
+                                ANSSI - Botnets <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Vecteurs d'infection -->
+                <div class="infection-vectors" data-aos="slide-up">
+                    <h3><i class="fas fa-route"></i> Vecteurs d'infection</h3>
+                    <p class="vectors-intro">Les malwares utilisent divers vecteurs pour infecter les systèmes, notamment les pièces jointes d'emails, les téléchargements de logiciels compromis, les sites web malveillants, les clés USB infectées et les vulnérabilités non corrigées.</p>
+                    
+                    <div class="vectors-grid">
+                        <div class="vector-item" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="vector-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h4>Emails malveillants</h4>
+                            <p>Pièces jointes infectées, liens vers des sites compromis</p>
+                        </div>
+                        
+                        <div class="vector-item" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="vector-icon">
+                                <i class="fas fa-download"></i>
+                            </div>
+                            <h4>Téléchargements</h4>
+                            <p>Logiciels compromis, sites de téléchargement malveillants</p>
+                        </div>
+                        
+                        <div class="vector-item" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="vector-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h4>Sites web</h4>
+                            <p>Drive-by downloads, kits d'exploitation</p>
+                        </div>
+                        
+                        <div class="vector-item" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="vector-icon">
+                                <i class="fas fa-usb"></i>
+                            </div>
+                            <h4>Supports amovibles</h4>
+                            <p>Clés USB, disques externes infectés</p>
+                        </div>
+                    </div>
+                    
+                    <div class="reference-links">
+                        <h4>Articles de référence :</h4>
+                        <div class="links-grid">
+                            <a href="https://www.ssi.gouv.fr/guide/guide-dhygiene-informatique" target="_blank" class="ref-link">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>ANSSI - Vecteurs d'infection</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques" target="_blank" class="ref-link">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <span>Cybermalveillance - Emails malveillants</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Techniques de protection -->
+                <div class="protection-techniques" data-aos="slide-up">
+                    <h3><i class="fas fa-shield-alt"></i> Techniques de protection</h3>
+                    <p class="protection-intro">La protection contre les malwares repose sur plusieurs niveaux de défense, incluant les antivirus, les pare-feu, les mises à jour régulières, la sensibilisation des utilisateurs et les sauvegardes.</p>
+                    
+                    <div class="protection-grid">
+                        <div class="protection-category" data-aos="slide-right" data-aos-delay="100">
+                            <h4><i class="fas fa-cogs"></i> Solutions techniques</h4>
+                            <ul class="protection-list">
+                                <li><i class="fas fa-check"></i> Antivirus et anti-malware</li>
+                                <li><i class="fas fa-check"></i> Pare-feu et systèmes de détection d'intrusion</li>
+                                <li><i class="fas fa-check"></i> Sandboxing et virtualisation</li>
+                                <li><i class="fas fa-check"></i> Mises à jour et correctifs de sécurité</li>
+                            </ul>
+                            <a href="https://www.ssi.gouv.fr/entreprise/bonnes-pratiques" target="_blank" class="protection-link">
+                                ANSSI - Solutions de sécurité <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="protection-category" data-aos="slide-left" data-aos-delay="200">
+                            <h4><i class="fas fa-users"></i> Bonnes pratiques</h4>
+                            <ul class="protection-list">
+                                <li><i class="fas fa-check"></i> Sauvegardes régulières (3-2-1)</li>
+                                <li><i class="fas fa-check"></i> Formation et sensibilisation</li>
+                                <li><i class="fas fa-check"></i> Principe du moindre privilège</li>
+                                <li><i class="fas fa-check"></i> Segmentation du réseau</li>
+                            </ul>
+                            <a href="https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/sauvegardes" target="_blank" class="protection-link">
+                                Cybermalveillance - Sauvegardes <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Ransomware Focus -->
+            <section class="ransomware-section" data-aos="fade-up">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-lock"></i>
+                        Focus : Les Ransomwares
+                    </h2>
+                    <p class="section-subtitle">La menace cybernétique la plus redoutée des entreprises</p>
+                </div>
+                
+                <div class="ransomware-content">
+                    <div class="ransomware-explanation">
+                        <div class="explanation-card" data-aos="slide-right">
+                            <h3>Fonctionnement</h3>
+                            <div class="process-steps">
+                                <div class="step">
+                                    <span class="step-number">1</span>
+                                    <span class="step-text">Infiltration via email ou vulnérabilité</span>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">2</span>
+                                    <span class="step-text">Chiffrement des fichiers critiques</span>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">3</span>
+                                    <span class="step-text">Affichage de la demande de rançon</span>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">4</span>
+                                    <span class="step-text">Négociation et paiement (ou refus)</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="famous-attacks" data-aos="slide-left">
+                            <h3>Attaques Notoires</h3>
+                            <div class="attack-list">
+                                <div class="attack-item">
+                                    <div class="attack-icon">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                    </div>
+                                    <div class="attack-info">
+                                        <h4>WannaCry (2017)</h4>
+                                        <p>300,000 ordinateurs infectés dans 150 pays</p>
+                                        <span class="attack-damage">Dommages : $4 milliards</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="attack-item">
+                                    <div class="attack-icon">
+                                        <i class="fas fa-fire"></i>
+                                    </div>
+                                    <div class="attack-info">
+                                        <h4>Ryuk (2018-2021)</h4>
+                                        <p>Ciblage d'hôpitaux et infrastructures critiques</p>
+                                        <span class="attack-damage">Rançons : $61 millions</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="attack-item">
+                                    <div class="attack-icon">
+                                        <i class="fas fa-skull-crossbones"></i>
+                                    </div>
+                                    <div class="attack-info">
+                                        <h4>Colonial Pipeline (2021)</h4>
+                                        <p>Paralysie du plus grand pipeline américain</p>
+                                        <span class="attack-damage">Rançon payée : $4.4 millions</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Graphiques -->
+            <section class="statistics-section" data-aos="fade-up">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-chart-line"></i>
+                        Évolution des Menaces
+                    </h2>
+                </div>
+                
+                <div class="charts-container">
+                    <div class="chart-card" data-aos="zoom-in" data-aos-delay="100">
+                        <h3>Évolution des attaques de malware (2015-2025)</h3>
+                        <canvas id="malwareEvolutionChart"></canvas>
+                    </div>
+                    
+                    <div class="chart-card" data-aos="zoom-in" data-aos-delay="200">
+                        <h3>Répartition des types de malware en 2025</h3>
+                        <canvas id="malwareTypesChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Timeline des attaques -->
+            <section class="timeline-section" data-aos="fade-up">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-history"></i>
+                        Timeline des Grandes Attaques
+                    </h2>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-year">1988</div>
+                        <div class="timeline-content">
+                            <h3>Morris Worm</h3>
+                            <p>Premier ver informatique à se propager massivement sur Internet, infectant 10% des ordinateurs connectés.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-aos="fade-left">
+                        <div class="timeline-year">2000</div>
+                        <div class="timeline-content">
+                            <h3>ILOVEYOU</h3>
+                            <p>Ver informatique propagé par email, causant des dommages estimés à 10 milliards de dollars.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-year">2010</div>
+                        <div class="timeline-content">
+                            <h3>Stuxnet</h3>
+                            <p>Premier malware conçu pour attaquer des infrastructures industrielles, ciblant les centrifugeuses iraniennes.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-aos="fade-left">
+                        <div class="timeline-year">2017</div>
+                        <div class="timeline-content">
+                            <h3>WannaCry</h3>
+                            <p>Ransomware global paralysant des hôpitaux, entreprises et services publics dans le monde entier.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-year">2021</div>
+                        <div class="timeline-content">
+                            <h3>SolarWinds</h3>
+                            <p>Attaque de la chaîne d'approvisionnement compromettant des milliers d'organisations via une mise à jour logicielle.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-aos="fade-left">
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-content">
+                            <h3>ChatGPT Malware</h3>
+                            <p>Émergence de malwares utilisant l'IA pour créer des attaques plus sophistiquées et personnalisées.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Actualités -->
+            <section class="news-section" data-aos="fade-up">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-newspaper"></i>
+                        Actualités Récentes
+                    </h2>
+                </div>
+                
+                <div class="news-grid">
+                    <article class="news-card" data-aos="slide-up" data-aos-delay="100">
+                        <div class="news-image">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-date">15 Janvier 2025</span>
+                            <h3>Nouvelle variante de ransomware détectée</h3>
+                            <p>Les chercheurs en sécurité ont identifié une nouvelle souche de ransomware ciblant spécifiquement les infrastructures cloud.</p>
+                            <a href="#" class="news-link">Lire plus <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    
+                    <article class="news-card" data-aos="slide-up" data-aos-delay="200">
+                        <div class="news-image">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-date">10 Janvier 2025</span>
+                            <h3>IA et cybersécurité : nouvelle ère</h3>
+                            <p>L'intelligence artificielle révolutionne à la fois les attaques et les défenses cybernétiques.</p>
+                            <a href="#" class="news-link">Lire plus <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    
+                    <article class="news-card" data-aos="slide-up" data-aos-delay="300">
+                        <div class="news-image">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-date">5 Janvier 2025</span>
+                            <h3>Coopération internationale renforcée</h3>
+                            <p>Les agences de cybersécurité mondiales unissent leurs forces contre les groupes de ransomware.</p>
+                            <a href="#" class="news-link">Lire plus <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Section Sources -->
+            <section class="sources-section" data-aos="fade-up">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-link"></i>
+                        Sources et Références
+                    </h2>
+                </div>
+                
+                <div class="sources-grid">
+                    <div class="source-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="source-logo">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>ANSSI</h3>
+                        <p>Agence Nationale de la Sécurité des Systèmes d'Information</p>
+                        <a href="https://www.ssi.gouv.fr" target="_blank" class="source-link">
+                            Visiter <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="source-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="source-logo">
+                            <i class="fas fa-virus"></i>
+                        </div>
+                        <h3>Kaspersky</h3>
+                        <p>Laboratoire de recherche en cybersécurité</p>
+                        <a href="https://www.kaspersky.com" target="_blank" class="source-link">
+                            Visiter <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="source-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="source-logo">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <h3>ZATAZ</h3>
+                        <p>Magazine spécialisé en sécurité informatique</p>
+                        <a href="https://www.zataz.com" target="_blank" class="source-link">
+                            Visiter <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="source-card" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="source-logo">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h3>LeMagIT</h3>
+                        <p>Actualités et analyses technologiques</p>
+                        <a href="https://www.lemagit.fr" target="_blank" class="source-link">
+                            Visiter <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Vidéo -->
+            <section class="video-section" data-aos="fade-up">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-play-circle"></i>
+                        Comprendre les Malwares
+                    </h2>
+                </div>
+                
+                <div class="video-container">
+                    <div class="video-placeholder" data-aos="zoom-in">
+                        <div class="video-content">
+                            <i class="fas fa-play"></i>
+                            <h3>Anatomie d'une Attaque Ransomware</h3>
+                            <p>Découvrez comment les cybercriminels orchestrent leurs attaques</p>
+                            <button class="play-button">
+                                <i class="fas fa-play"></i>
+                                Regarder la vidéo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/navigation.js"></script>
+    <script>
+        // Configuration particles.js avec thème futuriste
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 100,
+                    density: {
+                        enable: true,
+                        value_area: 1000
+                    }
+                },
+                color: {
+                    value: ['#6366f1', '#8b5cf6', '#06b6d4', '#10b981']
+                },
+                shape: {
+                    type: 'circle'
+                },
+                opacity: {
+                    value: 0.6,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 2,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#6366f1',
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: 'none',
+                    random: false,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: 'repulse'
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: 'push'
+                    },
+                    resize: true
+                },
+                modes: {
+                    repulse: {
+                        distance: 100,
+                        duration: 0.4
+                    },
+                    push: {
+                        particles_nb: 4
+                    }
+                }
+            },
+            retina_detect: true
+        });
+
+        // Initialisation AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+
+        // Graphiques Chart.js
+        document.addEventListener('DOMContentLoaded', function() {
+            // Graphique évolution des malwares
+            const ctx1 = document.getElementById('malwareEvolutionChart').getContext('2d');
+            new Chart(ctx1, {
+                type: 'line',
+                data: {
+                    labels: ['2015', '2017', '2019', '2021', '2023', '2025'],
+                    datasets: [{
+                        label: 'Nouveaux malwares (millions)',
+                        data: [431, 669, 812, 1200, 1650, 2040],
+                        borderColor: '#6366f1',
+                        backgroundColor: 'rgba(99, 102, 241, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: '#e2e8f0'
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            ticks: {
+                                color: '#e2e8f0'
+                            },
+                            grid: {
+                                color: 'rgba(226, 232, 240, 0.1)'
+                            }
+                        },
+                        x: {
+                            ticks: {
+                                color: '#e2e8f0'
+                            },
+                            grid: {
+                                color: 'rgba(226, 232, 240, 0.1)'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Graphique types de malware
+            const ctx2 = document.getElementById('malwareTypesChart').getContext('2d');
+            new Chart(ctx2, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Ransomware', 'Trojan', 'Virus', 'Spyware', 'Worm', 'Autres'],
+                    datasets: [{
+                        data: [35, 25, 15, 12, 8, 5],
+                        backgroundColor: [
+                            '#ef4444',
+                            '#f97316',
+                            '#eab308',
+                            '#22c55e',
+                            '#06b6d4',
+                            '#8b5cf6'
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: '#e2e8f0',
+                                padding: 20
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

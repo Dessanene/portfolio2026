@@ -1,0 +1,554 @@
+/* ===== SITUATIONS PROFESSIONNELLES - CSS MODERNE ===== */
+
+/* Variables CSS héritées du portfolio */
+:root {
+    --primary-dark: #0A0F2C;
+    --primary-cyan: #00D1FF;
+    --white: #FFFFFF;
+    --text-light: #E0E6ED;
+    --text-muted: #94A3B8;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --card-border: rgba(0, 209, 255, 0.2);
+    --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.15);
+    --shadow-heavy: 0 20px 40px rgba(0, 0, 0, 0.3);
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    --border-radius: 12px;
+    --border-radius-large: 20px;
+}
+
+/* Fond animé particles.js */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #1a1f3a 50%, var(--primary-dark) 100%);
+}
+
+/* Navigation héritée du portfolio - pas de styles supplémentaires nécessaires */
+/* Les styles de navigation sont gérés par navigation-new.css */
+
+/* Contenu principal */
+.main-content {
+    min-height: 100vh;
+    padding-top: 120px; /* Ajusté pour la navigation du portfolio */
+    position: relative;
+    z-index: 1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* En-tête de page */
+.page-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 2rem 0;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.page-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.page-title i {
+    color: var(--primary-cyan);
+    font-size: 2.5rem;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Grille des situations */
+.situations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+/* Cartes de situation */
+.situation-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--border-radius-large);
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-medium);
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.situation-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-cyan), #00a8cc);
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.situation-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-heavy);
+    border-color: var(--primary-cyan);
+}
+
+.situation-card:hover::before {
+    opacity: 1;
+}
+
+/* Cartes à venir */
+.situation-card.upcoming {
+    border-style: dashed;
+    border-color: rgba(148, 163, 184, 0.3);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.situation-card.upcoming:hover {
+    border-color: rgba(148, 163, 184, 0.5);
+}
+
+/* En-tête de carte */
+.situation-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.situation-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-cyan), #00a8cc);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 209, 255, 0.3);
+}
+
+.situation-icon i {
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.situation-title {
+    flex: 1;
+}
+
+.situation-title h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--white);
+    margin: 0 0 0.5rem 0;
+    line-height: 1.3;
+}
+
+.situation-subtitle {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.situation-badge {
+    flex-shrink: 0;
+}
+
+/* Badges */
+.badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge.sisr {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: var(--white);
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+.badge.upcoming-badge {
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    color: var(--white);
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+}
+
+/* Contenu de carte */
+.situation-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Sections de contenu */
+.context-section,
+.tech-section,
+.skills-section {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--border-radius);
+    border-left: 3px solid var(--primary-cyan);
+}
+
+.context-section h3,
+.tech-section h3,
+.skills-section h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-cyan);
+    margin: 0 0 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.context-section p,
+.tech-section p,
+.skills-section p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Tags technologiques */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-tag {
+    background: rgba(0, 209, 255, 0.1);
+    color: var(--primary-cyan);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid rgba(0, 209, 255, 0.3);
+    transition: all var(--transition-fast);
+}
+
+.tech-tag:hover {
+    background: rgba(0, 209, 255, 0.2);
+    border-color: var(--primary-cyan);
+}
+
+/* Liste de compétences */
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list li {
+    color: var(--text-light);
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.5;
+}
+
+.skills-list li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: var(--primary-cyan);
+    font-size: 0.8rem;
+}
+
+/* Actions de carte */
+.situation-actions {
+    margin-top: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(135deg, var(--primary-cyan), #00a8cc);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    transition: all var(--transition-normal);
+    box-shadow: 0 4px 12px rgba(0, 209, 255, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 209, 255, 0.4);
+    background: linear-gradient(135deg, #00a8cc, var(--primary-cyan));
+}
+
+/* Contenu des cartes à venir */
+.upcoming-content {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-muted);
+}
+
+.upcoming-icon {
+    font-size: 3rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    opacity: 0.6;
+}
+
+.upcoming-placeholder {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: rgba(148, 163, 184, 0.1);
+    border-radius: var(--border-radius);
+    border: 1px dashed rgba(148, 163, 184, 0.3);
+}
+
+.upcoming-placeholder span {
+    font-style: italic;
+    color: var(--text-muted);
+}
+
+/* Section conclusion */
+.conclusion-section {
+    margin-top: 4rem;
+    padding: 3rem 0;
+}
+
+.conclusion-content {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--border-radius-large);
+    padding: 3rem;
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-medium);
+}
+
+.conclusion-content h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.conclusion-content h2 i {
+    color: var(--primary-cyan);
+}
+
+.conclusion-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.conclusion-card {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--border-radius);
+    border-left: 3px solid var(--primary-cyan);
+}
+
+.conclusion-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-cyan);
+    margin-bottom: 1rem;
+}
+
+.conclusion-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.skills-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.skill-category {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--border-radius);
+    border-left: 3px solid var(--primary-cyan);
+}
+
+.skill-category h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-cyan);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-category li {
+    color: var(--text-light);
+    padding: 0.3rem 0;
+    padding-left: 1.2rem;
+    position: relative;
+    line-height: 1.4;
+}
+
+.skill-category li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-cyan);
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .page-title i {
+        font-size: 2rem;
+    }
+    
+    .situations-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .situation-card {
+        padding: 1.5rem;
+    }
+    
+    .situation-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .conclusion-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .conclusion-content {
+        padding: 2rem;
+    }
+    
+    .tech-tags {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        padding-top: 80px;
+    }
+    
+    .page-title {
+        font-size: 1.8rem;
+    }
+    
+    .situation-card {
+        padding: 1rem;
+    }
+    
+    .situation-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .situation-icon i {
+        font-size: 1.2rem;
+    }
+    
+    .conclusion-content {
+        padding: 1.5rem;
+    }
+}
+
+/* Animations d'entrée */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.situation-card {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.situation-card:nth-child(1) { animation-delay: 0.1s; }
+.situation-card:nth-child(2) { animation-delay: 0.2s; }
+.situation-card:nth-child(3) { animation-delay: 0.3s; }
+.situation-card:nth-child(4) { animation-delay: 0.4s; }
+
+.page-header {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.conclusion-section {
+    animation: fadeInUp 0.6s ease forwards;
+    animation-delay: 0.5s;
+}

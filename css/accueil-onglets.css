@@ -1,0 +1,100 @@
+/* Styles pour les onglets de la page d'accueil */
+.tabs-container {
+    margin: 2rem 0;
+    background: linear-gradient(to bottom, #f0f4ff, #ffffff);
+    border-radius: 10px;
+    padding: 2rem 0;
+}
+
+.tabs-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.tab-button {
+    background-color: #fff;
+    color: #0a192f;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tab-button.active {
+    background-color: #1e40af;
+    color: white;
+}
+
+.tab-button:hover:not(.active) {
+    background-color: #e6f1ff;
+}
+
+.tab-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+/* Style pour l'en-tête du contenu */
+.content-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    color: #0a192f;
+}
+
+.content-header i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: #64ffda;
+}
+
+.content-header h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Style pour le contenu À propos */
+.about-content {
+    line-height: 1.8;
+    color: #4a5568;
+}
+
+.about-content p {
+    margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tabs-nav {
+        flex-wrap: wrap;
+    }
+    
+    .tab-button {
+        flex: 1 0 40%;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+    
+    .tab-content {
+        padding: 1.5rem;
+    }
+}

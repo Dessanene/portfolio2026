@@ -1,0 +1,34 @@
+/* Fichier CSS spécifique pour supprimer tout texte de copyright indésirable */
+
+/* Règle globale pour supprimer tout contenu généré par les pseudo-éléments */
+*::before, 
+*::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* Exception pour le footer */
+footer *::before,
+footer *::after {
+    content: initial;
+    display: initial;
+}
+
+/* Règles spécifiques pour les sections problématiques */
+#about-content p::after,
+#about-content p::before,
+#skills-content *::after,
+#skills-content *::before,
+#qualities-content *::after,
+#qualities-content *::before {
+    content: none !important;
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* Masquer tout texte contenant "copyright" ou "2025" en dehors du footer */
+body *:not(footer):not(.footer-content) {
+    position: relative;
+    overflow: hidden;
+}

@@ -1,0 +1,227 @@
+/* Styles spécifiques pour la page Ateliers Pro */
+
+.page-header {
+    text-align: center;
+    padding: var(--spacing-xl) 0;
+    margin-bottom: var(--spacing-xl);
+    background: linear-gradient(135deg, rgba(30, 64, 175, 0.1), rgba(96, 165, 250, 0.1));
+    border-radius: var(--border-radius-lg);
+}
+
+.page-header h1 {
+    color: var(--primary);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.page-header p {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Cartes d'ateliers */
+.ateliers {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+.atelier-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.atelier-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.atelier-header {
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    color: var(--white);
+    padding: var(--spacing-md) var(--spacing-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.atelier-header h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.badge {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.atelier-content {
+    padding: var(--spacing-lg);
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: var(--spacing-lg);
+}
+
+.atelier-info {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    padding-right: var(--spacing-md);
+}
+
+.atelier-info p {
+    margin-bottom: var(--spacing-md);
+}
+
+.atelier-description h3 {
+    color: var(--primary);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.3rem;
+}
+
+.atelier-description p {
+    margin-bottom: var(--spacing-md);
+}
+
+.atelier-description ul {
+    list-style-type: disc;
+    padding-left: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.atelier-description li {
+    margin-bottom: var(--spacing-xs);
+}
+
+.atelier-gallery {
+    margin-top: var(--spacing-lg);
+}
+
+.atelier-gallery img {
+    width: 100%;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Barres de compétences */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.skill-name {
+    font-weight: 500;
+}
+
+.skill-bar {
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 5px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .atelier-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .atelier-info {
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding-right: 0;
+        padding-bottom: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .atelier-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .badge {
+        margin-top: var(--spacing-xs);
+    }
+}
+
+/* Styles pour la section "À propos des ateliers professionnels" */
+.about-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, rgba(10, 15, 44, 0.95), rgba(6, 17, 33, 0.95));
+    border-top: 1px solid rgba(0, 209, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(0, 209, 255, 0.1), transparent 70%);
+    pointer-events: none;
+}
+
+.about-section h2 {
+    color: var(--nav-accent);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 209, 255, 0.5);
+}
+
+.about-section p {
+    color: #ffffff;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    text-align: center;
+}
+
+.about-section p:last-child {
+    margin-bottom: 0;
+    border-left: 3px solid rgba(0, 209, 255, 0.5);
+    padding-left: 1.5rem;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .about-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .about-section p {
+        font-size: 1rem;
+        text-align: left;
+    }
+}

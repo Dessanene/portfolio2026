@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Professionnel | Dessanène Sanhan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navigation-new.css">
+    <link rel="stylesheet" href="css/home-modern.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Préchargeur -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Formes géométriques flottantes en arrière-plan -->
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+
+    <!-- Navigation principale -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="main-nav">
+                <div class="logo">
+                    <a href="index.html">SD</a>
+                </div>
+                
+                <ul class="nav-links">
+                    <!-- Liens principaux -->
+                    <li class="nav-item active">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Accueil</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="bts-sio.html" class="nav-link">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>BTS SIO</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="profil.html" class="nav-link">
+                            <i class="fas fa-user"></i>
+                            <span>Profil</span>
+                        </a>
+                    </li>
+                    
+                    <!-- Menu déroulant "Plus" -->
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            <i class="fas fa-folder"></i>
+                            <span>Dossiers</span>
+                            <i class="fas fa-chevron-down dropdown-icon"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a href="situations-pro.html">
+                                    <i class="fas fa-briefcase"></i>
+                                    <span>Situations Pro</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="ateliers-pro.html">
+                                    <i class="fas fa-tools"></i>
+                                    <span>Ateliers Pro</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="certifications.html">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>Certifications</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="stages.html">
+                                    <i class="fas fa-building"></i>
+                                    <span>Stages</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="veille.html">
+                                    <i class="fas fa-search"></i>
+                                    <span>Veille</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="contact.html">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Contact</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <!-- Bouton menu mobile -->
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- L'ancien sous-menu horizontal a été remplacé par un menu déroulant vertical -->
+
+    <!-- Hero Section avec pluie numérique en arrière-plan -->
+    <section class="hero-section">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Dessanène Sanhan</h1>
+            <h2 class="hero-subtitle">Explorateur IT – ingénieur en systèmes et réseaux</h2>
+            <div class="typewriter-container">
+                <div id="typewriter" class="typewriter-text"></div>
+            </div>
+            <div class="hero-buttons">
+                <a href="profil.html" class="hero-btn hero-btn-secondary">Voir mon profil</a>
+                <a href="situations-pro.html" class="hero-btn hero-btn-primary">Mes projets</a>
+            </div>
+        </div>
+        
+        <div class="hero-date">
+            <i class="fas fa-clock"></i>
+            <span id="current-date">Jeudi 10 Juillet 2025 à 20:32</span>
+        </div>
+        
+        <div class="hero-social">
+            <a href="https://www.linkedin.com/in/dessan%C3%A8ne-olivier-sanhan-ba5174205/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:oliviersanhan2016@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        
+        <div class="copyright">
+            &copy; <span id="current-year">2025</span> Dessanène Sanhan
+        </div>
+    </section>
+
+
+
+    <!-- Pas de footer séparé, tout est intégré dans la section hero -->
+
+        <!-- Scripts JS -->
+    <script src="js/script.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/date-time.js"></script>
+    <script src="js/matrix-effect.js"></script>
+    <script src="js/typewriter.js"></script>
+</body>
+</html>

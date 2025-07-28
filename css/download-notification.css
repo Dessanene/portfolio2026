@@ -1,0 +1,69 @@
+/* Styles pour la notification de téléchargement */
+.download-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(17, 24, 39, 0.95);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Share Tech Mono', monospace;
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+    z-index: 1000;
+    animation: slideIn 0.3s ease-out forwards, glowPulse 2s infinite;
+}
+
+.download-notification i {
+    font-size: 1.2rem;
+    animation: downloadPulse 1.5s infinite;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes downloadPulse {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .download-notification {
+        bottom: 10px;
+        right: 10px;
+        left: 10px;
+        font-size: 0.9rem;
+        padding: 12px 15px;
+    }
+}

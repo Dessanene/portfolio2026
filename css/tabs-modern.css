@@ -1,0 +1,96 @@
+/* Styles pour les onglets modernes */
+.tabs-section {
+    padding: 2rem 0;
+    background: linear-gradient(to bottom, #f0f4ff, #ffffff);
+}
+
+.tabs-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.tabs-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.tab-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background-color: #1e40af;
+    color: white;
+}
+
+.tab-btn:not(.active) {
+    background-color: white;
+    color: #0a192f;
+}
+
+.tab-btn:hover:not(.active) {
+    background-color: #e6f1ff;
+}
+
+.tab-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.tab-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.tab-header i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: #1e40af;
+}
+
+.tab-header h3 {
+    font-size: 1.5rem;
+    color: #0a192f;
+    margin: 0;
+}
+
+.tab-body {
+    color: #4a5568;
+    line-height: 1.8;
+}
+
+.tab-body p {
+    margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tabs-buttons {
+        flex-wrap: wrap;
+    }
+    
+    .tab-btn {
+        flex: 1 0 40%;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+}

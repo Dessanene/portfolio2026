@@ -1,0 +1,6 @@
+Ce dossier contiendra les images suivantes :
+- profile.jpg : Photo de profil circulaire
+- project1.jpg : Image du premier projet
+- project2.jpg : Image du deuxième projet
+
+Veuillez ajouter vos propres images dans ce dossier.

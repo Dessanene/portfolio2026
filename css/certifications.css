@@ -1,0 +1,395 @@
+/* Styles pour la page des certifications - Thème Cyberpunk */
+
+/* Variables */
+:root {
+    --cyber-blue: #00f0ff;
+    --cyber-purple: #d100f0;
+    --cyber-pink: #ff00aa;
+    --cyber-yellow: #f0e100;
+    --cyber-green: #00ff9f;
+    --dark-bg: #0a0a0f;
+    --darker-bg: #050508;
+    --card-bg: rgba(15, 20, 35, 0.8);
+    --text-glow: 0 0 5px rgba(0, 240, 255, 0.7);
+    --border-glow: 0 0 8px rgba(0, 240, 255, 0.6);
+    --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    --card-hover-transform: translateY(-10px);
+}
+
+/* Style général de la page */
+.certifications-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.certifications-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.certifications-header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    text-shadow: var(--text-glow);
+    position: relative;
+    display: inline-block;
+}
+
+.certifications-header h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--cyber-blue), var(--cyber-purple));
+    border-radius: 3px;
+}
+
+.certifications-header p {
+    color: #a0a0b0;
+    max-width: 700px;
+    margin: 1rem auto;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+}
+
+/* Grille des certifications */
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Carte de certification */
+.certification-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(0, 240, 255, 0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s forwards;
+    animation-delay: calc(var(--animation-order) * 0.1s);
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.certification-card:hover {
+    transform: var(--card-hover-transform);
+    box-shadow: var(--border-glow);
+    border-color: var(--cyber-blue);
+}
+
+.certification-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--cyber-blue), var(--cyber-purple), var(--cyber-blue));
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.certification-card:hover::before {
+    opacity: 1;
+}
+
+.certification-header {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.certification-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    filter: brightness(0.8) contrast(1.1);
+}
+
+.certification-card:hover .certification-header img {
+    transform: scale(1.05);
+}
+
+.certification-logo {
+    position: absolute;
+    bottom: -25px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--dark-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--cyber-blue);
+    z-index: 2;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification-card:hover .certification-logo {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+}
+
+.certification-logo i {
+    font-size: 2rem;
+    color: var(--cyber-blue);
+    text-shadow: 0 0 5px rgba(0, 240, 255, 0.7);
+}
+
+.certification-body {
+    padding: 1.5rem;
+    position: relative;
+}
+
+.certification-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3rem;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 3px rgba(0, 240, 255, 0.3);
+}
+
+.certification-metadata {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.metadata-item {
+    display: flex;
+    align-items: center;
+    color: #a0a0b0;
+    font-size: 0.9rem;
+}
+
+.metadata-item i {
+    color: var(--cyber-blue);
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.metadata-item span {
+    color: white;
+    margin-left: 0.3rem;
+}
+
+.certification-description {
+    color: #a0a0b0;
+    margin-bottom: 1.5rem;
+    font-family: 'Rajdhani', sans-serif;
+    line-height: 1.5;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #d0d0e0;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.skills-list li::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    color: var(--cyber-blue);
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.certification-footer {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid rgba(0, 240, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.certification-date {
+    font-family: 'Share Tech Mono', monospace;
+    color: var(--cyber-blue);
+    font-size: 0.9rem;
+}
+
+.certification-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.certification-button {
+    background: transparent;
+    border: 1px solid var(--cyber-blue);
+    color: var(--cyber-blue);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+.certification-button i {
+    margin-right: 0.5rem;
+}
+
+.certification-button:hover {
+    background: var(--cyber-blue);
+    color: var(--darker-bg);
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+}
+
+/* Animation des particules cyberpunk */
+.particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#certifications-particles-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .certifications-header h1 {
+        font-size: 2rem;
+    }
+    
+    .certification-metadata {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animation de pulsation pour les éléments cyberpunk */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 5px rgba(0, 240, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 240, 255, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(0, 240, 255, 0.5);
+    }
+}
+
+/* Animation de glitch pour les titres */
+@keyframes glitch {
+    0% {
+        text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+                    -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+                    -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    14% {
+        text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+                    -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+                    -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    15% {
+        text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+                    0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+                    -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    49% {
+        text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+                    0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+                    -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    50% {
+        text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+                    0.05em 0 0 rgba(0, 255, 0, 0.75),
+                    0 -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    99% {
+        text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+                    0.05em 0 0 rgba(0, 255, 0, 0.75),
+                    0 -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    100% {
+        text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
+                    -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+                    -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+}
+
+.glitch-effect:hover {
+    animation: glitch 0.3s infinite;
+}
+
+/* Badge de certification spécial */
+.certification-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: var(--cyber-green);
+    font-family: 'Share Tech Mono', monospace;
+    padding: 0.3rem 0.7rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    z-index: 2;
+    border: 1px solid var(--cyber-green);
+    text-transform: uppercase;
+}
+
+.certification-badge.verified {
+    color: var(--cyber-green);
+    border-color: var(--cyber-green);
+}
+
+.certification-badge.in-progress {
+    color: var(--cyber-yellow);
+    border-color: var(--cyber-yellow);
+}
+
+.certification-badge i {
+    margin-right: 0.3rem;
+}

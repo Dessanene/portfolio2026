@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navigation-new.css">
+    <link rel="stylesheet" href="css/profil.css">
+    <link rel="stylesheet" href="css/copyright-fix.css">
+    <link rel="stylesheet" href="css/home-modern.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation principale -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="main-nav">
+                <div class="logo">
+                    <a href="index.html">DS</a>
+                </div>
+                
+                <div class="nav-links">
+                    <!-- Liens principaux -->
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>Accueil</span>
+                    </a>
+                    <a href="bts-sio.html" class="nav-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>BTS SIO</span>
+                    </a>
+                    <a href="profil.html" class="nav-link active">
+                        <i class="fas fa-user"></i>
+                        <span>Profil</span>
+                    </a>
+                    
+                    <!-- Menu Plus -->
+                    <div class="plus-menu">
+                        <a href="#" class="nav-link plus-toggle">
+                            <i class="fas fa-plus-circle"></i>
+                            <span>Plus</span>
+                            <i class="fas fa-chevron-up plus-icon"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Bouton menu mobile -->
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <!-- Sous-menu -->
+                <div class="submenu-container">
+                    <div class="submenu">
+                        <a href="ateliers-pro.html" class="submenu-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Ateliers Pro</span>
+                        </a>
+                        <a href="situations-pro.html" class="submenu-item">
+                            <i class="fas fa-tasks"></i>
+                            <span>Situations Pro</span>
+                        </a>
+                        <a href="certifications.html" class="submenu-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>Certifications</span>
+                        </a>
+                        <a href="#" class="submenu-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact</span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenu principal -->
+    <main class="profile-container">
+            <!-- Section principale du profil - Carte unifiée avec fond animé -->
+            <div class="unified-card">
+                <!-- Photo et informations de base -->
+                <div class="profile-header">
+                    <div class="profile-photo">
+                        <img src="img/profile-photo.jpg" alt="Dessanène Sanhan" onerror="this.src='https://via.placeholder.com/200x200?text=DS'">
+                    </div>
+                    <div class="profile-info">
+                        <h2 class="profile-name">Déssanène Olivier SANHAN</h2>
+                        <p class="profile-title">Étudiant en BTS SIO option SISR</p>
+                        <p class="profile-subtitle">Solutions d'Infrastructure, Systèmes et Réseaux</p>
+                        <div class="action-buttons">
+                            <a href="#" class="action-button">
+                                <i class="fas fa-eye"></i> Consulter CV
+                            </a>
+                            <a href="#" class="action-button primary">
+                                <i class="fas fa-download"></i> Télécharger CV
+                            </a>
+                        </div>
+                        <div class="profile-social">
+                            <a href="https://www.linkedin.com/in/dessanène-olivier-sanhan-ba5174205/" target="_blank" class="social-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:oliviersanhan2016@gmail.com" class="social-icon">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation par onglets - Version simplifiée -->
+                <div class="profile-tabs">
+                    <div class="profile-tab active" data-tab="about">
+                        <i class="fas fa-user-circle"></i> À propos
+                    </div>
+                    <div class="profile-tab" data-tab="skills">
+                        <i class="fas fa-laptop-code"></i> Compétences
+                    </div>
+                    <div class="profile-tab" data-tab="education">
+                        <i class="fas fa-graduation-cap"></i> Formation
+                    </div>
+                    <div class="profile-tab" data-tab="qualities">
+                        <i class="fas fa-star"></i> Qualités
+                    </div>
+                </div>
+
+                <!-- Contenus des onglets -->
+                <div class="tab-content active" id="about-content">
+                    <section class="profile-section">
+                        <h3 class="section-title"><i class="fas fa-user-circle"></i> À propos de moi</h3>
+                        <div class="section-content">
+                            <p class="about-text">Je m'appelle Déssanène sanhan Olivier sanhan et je suis passionné par les infrastructures réseau, la cybersécurité et l'administration système. Je suis actuellement en formation BTS Services Informatiques aux Organisations, spécialité Solutions d'Infrastructure, Systèmes et Réseaux (SISR).</p>
+                            <p class="about-text">Mon objectif est de devenir administrateur systèmes et réseaux ou spécialiste en cybersécurité. Je m'intéresse particulièrement à la mise en place d'infrastructures sécurisées.</p>
+                            <style>
+                                .about-text::after {
+                                    content: none !important;
+                                    display: none !important;
+                                }
+                                #about-content .section-content::after {
+                                    content: none !important;
+                                    display: none !important;
+                                }
+                            </style>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Compétences -->
+                <div class="tab-content" id="skills-content">
+                    <section class="profile-section">
+                        <h3 class="section-title"><i class="fas fa-laptop-code"></i> Compétences techniques</h3>
+                        <div class="section-content">
+                            <div class="skills-categories">
+                                <div class="skill-category-card">
+                                    <h3><i class="fas fa-code"></i> Programmation</h3>
+                                    <div class="skill-bars">
+                                        <div class="skill-item">
+                                            <span class="skill-name" data-level="90%">HTML/CSS</span>
+                                            <div class="skill-bar">
+                                                <div class="skill-level" style="width: 90%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <span class="skill-name" data-level="60%">JavaScript</span>
+                                            <div class="skill-bar">
+                                                <div class="skill-level" style="width: 60%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <span class="skill-name" data-level="50%">PHP</span>
+                                            <div class="skill-bar">
+                                                <div class="skill-level" style="width: 50%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <span class="skill-name" data-level="65%">SQL</span>
+                                            <div class="skill-bar">
+                                                <div class="skill-level" style="width: 65%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <span class="skill-name" data-level="55%">Bash</span>
+                                            <div class="skill-bar">
+                                                <div class="skill-level" style="width: 55%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-category-card">
+                                    <h3><i class="fas fa-network-wired"></i> Systèmes et Réseaux</h3>
+                                    <div class="skill-bars">
+                                        <div class="skill-item">
+                                            <span class="skill-name" data-level="85%">Windows Server</span>
+                                            <div class="skill-bar">
+                                                <div class="skill-level" style="width: 85%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <span class="skill-name" data-level="75%">Linux</span>
+                                            <div class="skill-bar">
+                                                <div class="skill-level" style="width: 75%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <span class="skill-name" data-level="80%">Configuration réseau</span>
+                                            <div class="skill-bar">
+                                                <div class="skill-level" style="width: 80%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <span class="skill-name" data-level="70%">Protocoles réseaux</span>
+                                            <div class="skill-bar">
+                                                <div class="skill-level" style="width: 70%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <span class="skill-name" data-level="65%">Analyse de trames</span>
+                                            <div class="skill-bar">
+                                                <div class="skill-level" style="width: 65%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-category-card">
+                                    <h3><i class="fas fa-shield-alt"></i> Cybersécurité</h3>
+                                    <div class="skill-bars">
+                                        <div class="skill-item">
+                                            <span class="skill-name" data-level="75%">Pare-feu</span>
+                                            <div class="skill-bar">
+                                                <div class="skill-level" style="width: 75%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <span class="skill-name" data-level="65%">Chiffrement</span>
+                                            <div class="skill-bar">
+                                                <div class="skill-level" style="width: 65%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <span class="skill-name" data-level="70%">Authentification forte</span>
+                                            <div class="skill-bar">
+                                                <div class="skill-level" style="width: 70%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <span class="skill-name" data-level="70%">Sécurité réseau</span>
+                                            <div class="skill-bar">
+                                                <div class="skill-level" style="width: 70%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-category-card">
+                                    <h3><i class="fas fa-server"></i> Virtualisation</h3>
+                                    <div class="skill-bars">
+                                        <div class="skill-item">
+                                            <span class="skill-name" data-level="75%">VMware</span>
+                                            <div class="skill-bar">
+                                                <div class="skill-level" style="width: 75%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <span class="skill-name" data-level="65%">Docker</span>
+                                            <div class="skill-bar">
+                                                <div class="skill-level" style="width: 65%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <span class="skill-name" data-level="80%">VirtualBox</span>
+                                            <div class="skill-bar">
+                                                <div class="skill-level" style="width: 80%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Formation -->
+                <div class="tab-content" id="education-content">
+                    <section class="profile-section">
+                        <h3 class="section-title"><i class="fas fa-graduation-cap"></i> Formation</h3>
+                        <div class="section-content">
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-date">2022 - 2024</div>
+                                    <div class="timeline-content">
+                                        <h4>BTS SIO option SISR</h4>
+                                        <p>Lycée Turgot, Paris</p>
+                                        <p>Formation en cours sur les services informatiques aux organisations avec spécialisation en solutions d'infrastructure, systèmes et réseaux.</p>
+                                        <ul>
+                                            <li>Administration des systèmes et réseaux</li>
+                                            <li>Sécurité des infrastructures</li>
+                                            <li>Virtualisation et services cloud</li>
+                                            <li>Supervision et maintenance</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-date">2021 - 2022</div>
+                                    <div class="timeline-content">
+                                        <h4>Baccalauréat Général</h4>
+                                        <p>Lycée XXX, Paris</p>
+                                        <p>Spécialités Mathématiques et Numérique et Sciences Informatiques.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Qualités -->
+                <div class="tab-content" id="qualities-content">
+                    <section class="profile-section">
+                        <h3 class="section-title"><i class="fas fa-star"></i> Mes qualités professionnelles</h3>
+                        <div class="section-content">
+                            <p class="section-intro">Voici les qualités personnelles et professionnelles qui me caractérisent et que je mets au service de mes projets.</p>
+                            
+                            <div class="qualities-container">
+                                <div class="quality-card">
+                                    <div class="quality-icon">
+                                        <i class="fas fa-lightbulb"></i>
+                                    </div>
+                                    <h4 class="quality-title">Résolution de problèmes</h4>
+                                    <p class="quality-description">Capacité à analyser les situations complexes et à trouver des solutions efficaces, même sous pression.</p>
+                                    <div class="quality-bar-container">
+                                        <div class="quality-level">
+                                            <span>Niveau</span>
+                                            <span>85%</span>
+                                        </div>
+                                        <div class="quality-bar">
+                                            <div class="quality-progress" data-progress="85"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="quality-card">
+                                    <div class="quality-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <h4 class="quality-title">Travail d'équipe</h4>
+                                    <p class="quality-description">Aptitude à collaborer efficacement, partager des connaissances et contribuer à un environnement de travail positif.</p>
+                                    <div class="quality-bar-container">
+                                        <div class="quality-level">
+                                            <span>Niveau</span>
+                                            <span>90%</span>
+                                        </div>
+                                        <div class="quality-bar">
+                                            <div class="quality-progress" data-progress="90"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="quality-card">
+                                    <div class="quality-icon">
+                                        <i class="fas fa-book-reader"></i>
+                                    </div>
+                                    <h4 class="quality-title">Apprentissage continu</h4>
+                                    <p class="quality-description">Curiosité intellectuelle et volonté constante d'acquérir de nouvelles compétences et connaissances dans le domaine IT.</p>
+                                    <div class="quality-bar-container">
+                                        <div class="quality-level">
+                                            <span>Niveau</span>
+                                            <span>95%</span>
+                                        </div>
+                                        <div class="quality-bar">
+                                            <div class="quality-progress" data-progress="95"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="quality-card">
+                                    <div class="quality-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <h4 class="quality-title">Gestion du temps</h4>
+                                    <p class="quality-description">Organisation efficace des tâches et respect des délais, même dans des projets complexes avec des contraintes temporelles.</p>
+                                    <div class="quality-bar-container">
+                                        <div class="quality-level">
+                                            <span>Niveau</span>
+                                            <span>80%</span>
+                                        </div>
+                                        <div class="quality-bar">
+                                            <div class="quality-progress" data-progress="80"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="quality-card">
+                                    <div class="quality-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <h4 class="quality-title">Rigueur et méthodologie</h4>
+                                    <p class="quality-description">Application systématique des bonnes pratiques et attention aux détails, particulièrement importante en sécurité informatique.</p>
+                                    <div class="quality-bar-container">
+                                        <div class="quality-level">
+                                            <span>Niveau</span>
+                                            <span>85%</span>
+                                        </div>
+                                        <div class="quality-bar">
+                                            <div class="quality-progress" data-progress="85"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="quality-card">
+                                    <div class="quality-icon">
+                                        <i class="fas fa-comments"></i>
+                                    </div>
+                                    <h4 class="quality-title">Communication</h4>
+                                    <p class="quality-description">Capacité à expliquer des concepts techniques complexes de manière claire et accessible à différents publics.</p>
+                                    <div class="quality-bar-container">
+                                        <div class="quality-level">
+                                            <span>Niveau</span>
+                                            <span>75%</span>
+                                        </div>
+                                        <div class="quality-bar">
+                                            <div class="quality-progress" data-progress="75"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Bouton retour à l'accueil -->
+                <div class="cv-download">
+                    <a href="index.html" class="btn-download home-button">
+                        <i class="fas fa-home"></i> Retour à l'accueil
+                    </a>
+                </div>
+            </div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="footer-content">
+            <!-- Icônes sociales supprimées -->
+            <div class="footer-credits">
+                <div class="copyright">
+                    &copy; 2025 Déssanène Olivier SANHAN - Tous droits réservés
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/navigation.js"></script>
+    <script src="js/matrix-effect.js"></script>
+    <script src="js/date-time.js"></script>
+    <script src="js/tabs.js"></script>
+    <!-- <script src="js/remove-copyright.js"></script> -->
+</body>
+</html>

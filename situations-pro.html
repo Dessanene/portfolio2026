@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situations Professionnelles - Portfolio | Dessanène Sanhan</title>
+    
+    <!-- CSS du portfolio -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navigation-new.css">
+    <link rel="stylesheet" href="css/situations-pro-modern.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Polices Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <!-- Fond animé avec particles.js -->
+    <div id="particles-js"></div>
+    
+    <!-- Navigation principale (identique au portfolio) -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="main-nav">
+                <div class="logo">
+                    <a href="index.html">SD</a>
+                </div>
+                
+                <ul class="nav-links">
+                    <!-- Liens principaux -->
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Accueil</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="bts-sio.html" class="nav-link">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>BTS SIO</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="profil.html" class="nav-link">
+                            <i class="fas fa-user"></i>
+                            <span>Profil</span>
+                        </a>
+                    </li>
+                    
+                    <!-- Menu déroulant "Dossiers" -->
+                    <li class="nav-item dropdown active">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            <i class="fas fa-folder"></i>
+                            <span>Dossiers</span>
+                            <i class="fas fa-chevron-down dropdown-icon"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item active">
+                                <a href="situations-pro.html">
+                                    <i class="fas fa-briefcase"></i>
+                                    <span>Situations Pro</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="ateliers-pro.html">
+                                    <i class="fas fa-tools"></i>
+                                    <span>Ateliers Pro</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="certifications.html">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>Certifications</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="stages.html">
+                                    <i class="fas fa-building"></i>
+                                    <span>Stages</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="veille.html">
+                                    <i class="fas fa-search"></i>
+                                    <span>Veille</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="contact.html">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Contact</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <!-- Bouton menu mobile -->
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenu principal -->
+    <main class="main-content">
+        <div class="container">
+            <!-- En-tête de page -->
+            <section class="page-header">
+                <div class="header-content">
+                    <h1 class="page-title">
+                        <i class="fas fa-briefcase"></i>
+                        Mes situations professionnelles
+                    </h1>
+                    <p class="page-subtitle">Découvrez les projets réalisés dans le cadre de ma formation BTS SIO option SISR</p>
+                </div>
+            </section>
+            
+            <!-- Grille des situations professionnelles -->
+            <section class="situations-grid">
+                <!-- Situation professionnelle 1 -->
+                <div class="situation-card">
+                    <div class="situation-header">
+                        <div class="situation-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="situation-title">
+                            <h2>Situation professionnelle 1</h2>
+                            <p class="situation-subtitle">Mise en place d'un système de sauvegarde et de sécurisation d'infrastructure</p>
+                        </div>
+                        <div class="situation-badge">
+                            <span class="badge sisr">SISR</span>
+                        </div>
+                    </div>
+                    
+                    <div class="situation-content">
+                        <div class="context-section">
+                            <h3><i class="fas fa-building"></i> Contexte professionnel</h3>
+                            <p>Dans le cadre de ma mission au sein de l'organisation GSB, j'ai mis en place un système de sauvegarde centralisé à l'aide de BackupPC. J'ai également configuré Fail2ban afin de renforcer la sécurité de l'infrastructure réseau.</p>
+                        </div>
+                        
+                        <div class="tech-section">
+                            <h3><i class="fas fa-code"></i> Technologies utilisées</h3>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Linux</span>
+                                <span class="tech-tag">BackupPC</span>
+                                <span class="tech-tag">Fail2ban</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skills-section">
+                            <h3><i class="fas fa-cogs"></i> Compétences mises en œuvre</h3>
+                            <ul class="skills-list">
+                                <li>Analyse des besoins en sauvegarde et en sécurité</li>
+                                <li>Installation et configuration des outils sur un environnement Linux</li>
+                                <li>Mise en place de stratégies de sauvegarde automatisées</li>
+                                <li>Application de règles de sécurité personnalisées</li>
+                                <li>Rédaction de la documentation technique destinée à l'équipe</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="situation-actions">
+                            <a href="#" class="btn-primary">
+                                <i class="fas fa-file-alt"></i>
+                                Voir le rapport détaillé
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Situation professionnelle 2 -->
+                <div class="situation-card">
+                    <div class="situation-header">
+                        <div class="situation-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="situation-title">
+                            <h2>Situation professionnelle 2</h2>
+                            <p class="situation-subtitle">Implémentation d'une solution de supervision réseau</p>
+                        </div>
+                        <div class="situation-badge">
+                            <span class="badge sisr">SISR</span>
+                        </div>
+                    </div>
+                    
+                    <div class="situation-content">
+                        <div class="context-section">
+                            <h3><i class="fas fa-building"></i> Contexte professionnel</h3>
+                            <p>Lors d'une mission pour GSB, j'ai été chargé de mettre en place une solution de supervision afin d'assurer la disponibilité et la performance de deux services critiques : le service FTP et le serveur SNMP. Pour cela, j'ai utilisé Zabbix, configuré pour envoyer des alertes en cas d'incident ou de dépassement de seuils critiques.</p>
+                        </div>
+                        
+                        <div class="tech-section">
+                            <h3><i class="fas fa-code"></i> Technologies utilisées</h3>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Zabbix</span>
+                                <span class="tech-tag">SQL</span>
+                                <span class="tech-tag">Linux</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skills-section">
+                            <h3><i class="fas fa-cogs"></i> Compétences mises en œuvre</h3>
+                            <ul class="skills-list">
+                                <li>Analyse des besoins en supervision réseau</li>
+                                <li>Installation et configuration de Zabbix</li>
+                                <li>Création de tableaux de bord personnalisés</li>
+                                <li>Configuration des alertes automatiques</li>
+                                <li>Formation des utilisateurs à l'outil de supervision</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="situation-actions">
+                            <a href="#" class="btn-primary">
+                                <i class="fas fa-file-alt"></i>
+                                Voir le rapport détaillé
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Situation professionnelle 3 - À venir -->
+                <div class="situation-card upcoming">
+                    <div class="situation-header">
+                        <div class="situation-icon">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                        <div class="situation-title">
+                            <h2>Situation professionnelle 2025-2026</h2>
+                            <p class="situation-subtitle">À venir — en cours de rédaction</p>
+                        </div>
+                        <div class="situation-badge">
+                            <span class="badge upcoming-badge">À venir</span>
+                        </div>
+                    </div>
+                    
+                    <div class="situation-content">
+                        <div class="upcoming-content">
+                            <i class="fas fa-clock upcoming-icon"></i>
+                            <p>Une nouvelle situation professionnelle sera ajoutée prochainement pour refléter l'évolution de mes compétences durant l'année en cours.</p>
+                            <div class="upcoming-placeholder">
+                                <span>En préparation...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Situation professionnelle 4 - Carte vide supplémentaire -->
+                <div class="situation-card upcoming">
+                    <div class="situation-header">
+                        <div class="situation-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="situation-title">
+                            <h2>Nouvelle situation professionnelle</h2>
+                            <p class="situation-subtitle">Espace réservé pour un futur projet</p>
+                        </div>
+                        <div class="situation-badge">
+                            <span class="badge upcoming-badge">Futur</span>
+                        </div>
+                    </div>
+                    
+                    <div class="situation-content">
+                        <div class="upcoming-content">
+                            <i class="fas fa-rocket upcoming-icon"></i>
+                            <p>Cette carte est prête à accueillir une nouvelle situation professionnelle qui sera développée au cours de cette année académique.</p>
+                            <div class="upcoming-placeholder">
+                                <span>Prochainement...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Section conclusion -->
+            <section class="conclusion-section">
+                <div class="conclusion-content">
+                    <h2><i class="fas fa-graduation-cap"></i> Conclusion</h2>
+                    <div class="conclusion-grid">
+                        <div class="conclusion-card">
+                            <h3>Synthèse des compétences acquises</h3>
+                            <p>Ces expériences ont été réalisées dans le cadre de ma formation BTS SIO - option SISR. Elles démontrent ma capacité à analyser des problématiques techniques, à proposer des solutions concrètes, et à les mettre en œuvre dans un environnement professionnel réel.</p>
+                        </div>
+                        
+                        <div class="skills-summary">
+                            <div class="skill-category">
+                                <h4><i class="fas fa-tools"></i> Compétences techniques</h4>
+                                <ul>
+                                    <li>Administration de systèmes et de réseaux</li>
+                                    <li>Supervision des infrastructures</li>
+                                    <li>Sécurisation informatique</li>
+                                    <li>Déploiement de solutions sur mesure</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="skill-category">
+                                <h4><i class="fas fa-users"></i> Compétences transversales</h4>
+                                <ul>
+                                    <li>Gestion de projet</li>
+                                    <li>Rédaction de documentation technique</li>
+                                    <li>Communication professionnelle</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/navigation.js"></script>
+    <script>
+        // Configuration particles.js
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: ['#00D1FF', '#0A0F2C']
+                },
+                shape: {
+                    type: 'circle'
+                },
+                opacity: {
+                    value: 0.5,
+                    random: false,
+                    anim: {
+                        enable: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#00D1FF',
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 6,
+                    direction: 'none',
+                    random: false,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: 'repulse'
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: 'push'
+                    },
+                    resize: true
+                },
+                modes: {
+                    grab: {
+                        distance: 400,
+                        line_linked: {
+                            opacity: 1
+                        }
+                    },
+                    bubble: {
+                        distance: 400,
+                        size: 40,
+                        duration: 2,
+                        opacity: 8,
+                        speed: 3
+                    },
+                    repulse: {
+                        distance: 200,
+                        duration: 0.4
+                    },
+                    push: {
+                        particles_nb: 4
+                    },
+                    remove: {
+                        particles_nb: 2
+                    }
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+</body>
+</html>

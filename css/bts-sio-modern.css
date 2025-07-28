@@ -1,0 +1,442 @@
+/* BTS SIO - Style moderne harmonisé avec le portfolio */
+
+/* Variables reprises du portfolio principal */
+:root {
+    --primary: #0A0F2C;
+    --secondary: #00D1FF;
+    --accent: #00D1FF;
+    --white: #FFFFFF;
+    --light-gray: #F8FAFC;
+    --dark-gray: #334155;
+    --text-color: #1E293B;
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --transition-normal: 0.3s ease;
+    --border-radius-lg: 1rem;
+}
+
+/* Fond particles.js */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(135deg, var(--primary) 0%, #1a1f3a 100%);
+}
+
+/* Contenu principal */
+.bts-sio-main {
+    padding-top: 120px;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+/* En-têtes de sections */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.page-title i {
+    margin-right: 1rem;
+    color: var(--secondary);
+}
+
+.page-subtitle {
+    font-size: 1.5rem;
+    color: var(--light-gray);
+    font-weight: 300;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.section-title i {
+    margin-right: 1rem;
+    color: var(--secondary);
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: var(--light-gray);
+    font-weight: 300;
+}
+
+/* Section Présentation */
+.bts-presentation {
+    margin-bottom: 5rem;
+}
+
+.presentation-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 209, 255, 0.2);
+    border-radius: var(--border-radius-lg);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-lg);
+    transition: all var(--transition-normal);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.presentation-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 209, 255, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 209, 255, 0.1);
+}
+
+.presentation-text {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: var(--light-gray);
+    text-align: center;
+    margin: 0;
+}
+
+/* Section Parcours */
+.parcours-section {
+    margin-bottom: 5rem;
+}
+
+.parcours-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.parcours-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 209, 255, 0.2);
+    border-radius: var(--border-radius-lg);
+    padding: 2rem;
+    transition: all var(--transition-normal);
+    cursor: pointer;
+}
+
+.parcours-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--secondary);
+    box-shadow: 0 20px 40px rgba(0, 209, 255, 0.2);
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.card-header i {
+    font-size: 3rem;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.card-header h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+    font-size: 1rem;
+    color: var(--secondary);
+    font-weight: 500;
+    display: block;
+}
+
+.card-content p {
+    font-size: 1.1rem;
+    color: var(--light-gray);
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Section Focus */
+.focus-section {
+    margin-bottom: 5rem;
+}
+
+.focus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.focus-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 209, 255, 0.2);
+    border-radius: var(--border-radius-lg);
+    padding: 2.5rem;
+    transition: all var(--transition-normal);
+}
+
+.focus-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary);
+    box-shadow: 0 20px 40px rgba(0, 209, 255, 0.15);
+}
+
+.focus-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.focus-header i {
+    font-size: 2.5rem;
+    color: var(--secondary);
+    margin-right: 1rem;
+}
+
+.focus-header h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.focus-intro {
+    font-size: 1.2rem;
+    color: var(--light-gray);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.focus-list {
+    list-style: none;
+    padding: 0;
+}
+
+.focus-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: var(--light-gray);
+    line-height: 1.6;
+}
+
+.focus-list li i {
+    color: var(--secondary);
+    margin-right: 1rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+}
+
+/* Section Poursuite d'études */
+.poursuite-section {
+    margin-bottom: 5rem;
+}
+
+.poursuite-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.poursuite-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 209, 255, 0.2);
+    border-radius: var(--border-radius-lg);
+    padding: 2rem;
+    text-align: center;
+    transition: all var(--transition-normal);
+    cursor: pointer;
+}
+
+.poursuite-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--secondary);
+    box-shadow: 0 15px 30px rgba(0, 209, 255, 0.2);
+}
+
+.poursuite-card i {
+    font-size: 3rem;
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.poursuite-card h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.poursuite-card p {
+    font-size: 1rem;
+    color: var(--light-gray);
+    line-height: 1.5;
+}
+
+/* Section Débouchés */
+.debouches-section {
+    margin-bottom: 5rem;
+}
+
+.debouches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.debouche-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 209, 255, 0.2);
+    border-radius: var(--border-radius-lg);
+    padding: 2.5rem;
+    transition: all var(--transition-normal);
+}
+
+.debouche-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary);
+    box-shadow: 0 20px 40px rgba(0, 209, 255, 0.15);
+}
+
+.debouche-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(0, 209, 255, 0.2);
+}
+
+.debouche-header i {
+    font-size: 2.5rem;
+    color: var(--secondary);
+    margin-right: 1rem;
+}
+
+.debouche-header h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.debouche-content h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+}
+
+.debouche-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.debouche-content li {
+    font-size: 1.1rem;
+    color: var(--light-gray);
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.debouche-content li::before {
+    content: "▸";
+    color: var(--secondary);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bts-sio-main {
+        padding-top: 100px;
+    }
+    
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .parcours-grid,
+    .focus-grid,
+    .debouches-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .poursuite-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .presentation-card,
+    .focus-card,
+    .debouche-card {
+        padding: 1.5rem;
+    }
+    
+    .focus-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .focus-header i {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .debouche-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .debouche-header i {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .presentation-text {
+        font-size: 1.1rem;
+    }
+    
+    .card-header h3 {
+        font-size: 1.5rem;
+    }
+    
+    .focus-header h3,
+    .debouche-header h3 {
+        font-size: 1.5rem;
+    }
+}
