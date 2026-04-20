@@ -8,6 +8,74 @@ document.addEventListener('DOMContentLoaded', function() {
     const docLinks = document.querySelectorAll('.tech-doc-link');
     const downloadLinks = document.querySelectorAll('.tech-download-link');
     
+    // Configuration des fichiers à télécharger (doit être défini avant les écouteurs)
+    const downloadFiles = {
+        'lxc': {
+            filename: 'lxc.pdf',
+            path: 'documents/ateliers/lxc.pdf'
+        },
+        'bind9': {
+            filename: 'domain_name_system_dns.pdf',
+            path: 'documents/ateliers/domain_name_system_dns.pdf'
+        },
+        'rsync': {
+            filename: 'backup.pdf',
+            path: 'documents/ateliers/backup.pdf'
+        },
+        'ftp': {
+            filename: 'ftp.pdf',
+            path: 'documents/ateliers/ftp.pdf'
+        },
+        'tls': {
+            filename: 'ssl_tls.pdf',
+            path: 'documents/ateliers/ssl_tls.pdf'
+        },
+        'dhcp': {
+            filename: 'installation_et_configuration_du_serveur_dhcp.pdf',
+            path: 'documents/ateliers/installation_et_configuration_du_serveur_dhcp.pdf'
+        },
+        'f2b': {
+            filename: 'portsentry_fail2ban.pdf',
+            path: 'documents/ateliers/portsentry_fail2ban.pdf'
+        },
+        'zabbix': {
+            filename: 'installation_de_zabbix_7.2.pdf',
+            path: 'documents/ateliers/installation_de_zabbix_7.2.pdf'
+        },
+        'mysql': {
+            filename: 'creation_de_vm_serveurs_base_de_donnees_mariadb.pdf',
+            path: 'documents/ateliers/creation_de_vm_serveurs_base_de_donnees_mariadb.pdf'
+        },
+        'https': {
+            filename: 'https.pdf',
+            path: 'documents/ateliers/https.pdf'
+        },
+        'ssh': {
+            filename: 'atelier_ssh.pdf',
+            path: 'documents/ateliers/atelier_ssh.pdf'
+        },
+        'failover': {
+            filename: 'dhcp_failover.pdf',
+            path: 'documents/ateliers/dhcp_failover.pdf'
+        },
+        'https-ssl': {
+            filename: 'https.pdf',
+            path: 'documents/ateliers/https.pdf'
+        },
+        'gpg': {
+            filename: 'gpg_-_gpg.pdf',
+            path: 'documents/ateliers/gpg_-_gpg.pdf'
+        },
+        'dhcp-relay': {
+            filename: 'configuration_de_l_agent_relais_dhcp.pdf',
+            path: 'documents/ateliers/configuration_de_l_agent_relais_dhcp.pdf'
+        },
+        'dns-recursif': {
+            filename: 'installation_d_un_serveur_dns_recursif.pdf',
+            path: 'documents/ateliers/installation_d_un_serveur_dns_recursif.pdf'
+        }
+    };
+
     // Contenu des documentations (simulé)
     const documentations = {
         'lxc': {
@@ -518,6 +586,9 @@ find $BACKUP_DIR -type d -mtime +30 -exec rm -rf {} \\;
     
     // Ouvrir la modal avec la documentation correspondante
     function openDocModal(docId) {
+        if (!modal || !modalTitle || !modalContent) {
+            return;
+        }
         if (documentations[docId]) {
             modalTitle.textContent = documentations[docId].title;
             modalContent.innerHTML = documentations[docId].content;
@@ -534,95 +605,39 @@ find $BACKUP_DIR -type d -mtime +30 -exec rm -rf {} \\;
             modal.style.display = 'block';
         }
     }
+
+    function openPdf(pdfPath) {
+        window.location.href = pdfPath;
+    }
     
-    // Ajouter les écouteurs d'événements
+    // Ajouter les écouteurs d'événements - Ouvre le PDF dans un nouvel onglet
     docLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const docId = this.getAttribute('data-doc');
-            openDocModal(docId);
+            // Si un PDF existe, l'ouvrir dans un nouvel onglet
+            if (downloadFiles[docId]) {
+                openPdf(downloadFiles[docId].path);
+            } else {
+                // Sinon, afficher la modal avec le contenu HTML
+                openDocModal(docId);
+            }
         });
     });
     
     // Fermer la modal
-    closeModal.addEventListener('click', function() {
-        modal.style.display = 'none';
-    });
+    if (closeModal && modal) {
+        closeModal.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+    }
     
     // Fermer la modal en cliquant en dehors
     window.addEventListener('click', function(e) {
-        if (e.target === modal) {
+        if (modal && e.target === modal) {
             modal.style.display = 'none';
         }
     });
-    
-    // Configuration des fichiers à télécharger
-    const downloadFiles = {
-        'lxc': {
-            filename: 'atelier_lxc.pdf',
-            path: 'documents/ateliers/atelier_lxc.pdf'
-        },
-        'lamp': {
-            filename: 'atelier_lamp.pdf',
-            path: 'documents/ateliers/atelier_lamp.pdf'
-        },
-        'bind9': {
-            filename: 'atelier_bind9.pdf',
-            path: 'documents/ateliers/atelier_bind9.pdf'
-        },
-        'rsync': {
-            filename: 'atelier_rsync.pdf',
-            path: 'documents/ateliers/atelier_rsync.pdf'
-        },
-        'ftp': {
-            filename: 'atelier_ftp.pdf',
-            path: 'documents/ateliers/atelier_ftp.pdf'
-        },
-        'apache': {
-            filename: 'atelier_apache.pdf',
-            path: 'documents/ateliers/atelier_apache.pdf'
-        },
-        'tls': {
-            filename: 'atelier_tls.pdf',
-            path: 'documents/ateliers/atelier_tls.pdf'
-        },
-        'dhcp': {
-            filename: 'atelier_dhcp.pdf',
-            path: 'documents/ateliers/atelier_dhcp.pdf'
-        },
-        'fail2ban': {
-            filename: 'atelier_fail2ban.pdf',
-            path: 'documents/ateliers/atelier_fail2ban.pdf'
-        },
-        'samba': {
-            filename: 'atelier_samba.pdf',
-            path: 'documents/ateliers/atelier_samba.pdf'
-        },
-        'opnsense': {
-            filename: 'atelier_opnsense.pdf',
-            path: 'documents/ateliers/atelier_opnsense.pdf'
-        },
-        'ws': {
-            filename: 'atelier_active_directory.pdf',
-            path: 'documents/ateliers/atelier_active_directory.pdf'
-        },
-        'zabbix': {
-            filename: 'atelier_zabbix.pdf',
-            path: 'documents/ateliers/atelier_zabbix.pdf'
-        },
-        'mysql': {
-            filename: 'atelier_mysql.pdf',
-            path: 'documents/ateliers/atelier_mysql.pdf'
-        },
-        'ssh': {
-            filename: 'atelier_ssh.pdf',
-            path: 'documents/ateliers/atelier_ssh.pdf'
-        },
-        'mfa': {
-            filename: 'atelier_mfa.pdf',
-            path: 'documents/ateliers/atelier_mfa.pdf'
-        }
-    };
     
     // Gérer les téléchargements
     function handleDownload(downloadId) {
@@ -637,8 +652,13 @@ find $BACKUP_DIR -type d -mtime +30 -exec rm -rf {} \\;
             
             // Simuler un téléchargement (dans un environnement réel, cela serait un lien direct vers le fichier)
             setTimeout(() => {
-                // Redirection vers le fichier à télécharger
-                window.location.href = fileInfo.path;
+                // Téléchargement forcé via un lien temporaire
+                const link = document.createElement('a');
+                link.href = fileInfo.path;
+                link.download = fileInfo.filename;
+                document.body.appendChild(link);
+                link.click();
+                link.remove();
                 
                 // Supprimer la notification après un délai
                 setTimeout(() => {
